@@ -13,7 +13,7 @@ body {
 	font-family: Verdana, sans-serif;
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
+	max-width: 70ch;
 	text-align: left;
 	background-color: #DAD7CD;
 	word-wrap: break-word;
@@ -34,7 +34,16 @@ body {
 
 main {
 	margin: 1em;
-	padding: 2em 2em 2em 0em;
+	padding: 2em 0em 2em 0em;
+}
+
+.contentTitle {
+	line-height: 0px;
+	font-size: 2.3em;
+	font-family: title;
+	color: #A3B18A;
+	-webkit-text-stroke: 1px #588157; 
+	text-shadow: 1px 1px 0 #588157;
 }
 
 h1,
@@ -52,6 +61,12 @@ a {
 }
 nav a {
 	margin-right: 10px;
+	line-height: 0px;
+	font-size: 23px;
+	font-family: title;
+	color: #A3B18A;
+	-webkit-text-stroke: 0.8px #588157; 
+	text-shadow: 0.5px 0.5px 0 #588157;
 }
 textarea {
 	width: 100%;
