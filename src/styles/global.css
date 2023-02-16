@@ -18,18 +18,15 @@ body {
 	background-color: #DAD7CD;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	line-height: 1.5;
 	color: #444;
 }
 
 .title {
-	line-height: 0px;
     font-size: 65px;;
     font-family: title;
     color: #A3B18A;
     -webkit-text-stroke: 2px #588157; 
     text-shadow: 2px 2px 0 #588157;
-	padding-bottom: 0.5em;
 }
 
 main {
@@ -38,7 +35,6 @@ main {
 }
 
 .contentTitle {
-	line-height: 0px;
 	font-size: 2.3em;
 	font-family: title;
 	color: #A3B18A;
