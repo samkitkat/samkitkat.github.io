@@ -8,6 +8,34 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+		<script is:inline>
+			window.addEventListener('DOMContentLoaded', () => {
+				VANTA.BIRDS({
+					el: 'body',
+					mouseControls: true,
+					touchControls: true,
+					gyroControls: false,
+					minHeight: 200.00,
+					minWidth: 200.00,
+					scale: 1.00,
+					scaleMobile: 1.00,
+					color1: 0x83b7d7,
+					color2: 0xedcdea,
+					colorMode: "variance",
+					birdSize: 2.00,
+					wingSpan: 12.00,
+					speedLimit: 3.00,
+					separation: 10.00,
+					alignment: 12.00,
+					cohesion: 41.00,
+					quantity: 3.0,
+					speedLimit: 10.00,
+					backgroundAlpha: 0.00
+				})
+			})
+		</script>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
@@ -23,3 +51,4 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Footer />
 	</body>
 </html>
+
