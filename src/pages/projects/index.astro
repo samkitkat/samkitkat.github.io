@@ -14,40 +14,96 @@ const posts = (await getCollection('projects')).sort(
 	<head>
 		<BaseHead />
 		<style>
+			h1 {
+				text-align: center;
+			}
 			ul {
 				list-style-type: none;
-				padding: unset;
 			}
 			ul li {
 				display: flex;
 			}
-			ul li time {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #595959;
+			a {
+				text-decoration: none;
 			}
-			ul li a:visited {
-				color: #8e32dc;
+			.project-card {
+				align-items: center;
+				justify-content: center;
+				background-color: rgba(163, 177, 138, 0.667);
+				border-radius: 1em;
+				padding: 1em;
+				margin-bottom: 1em;
+				box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+				transition: .3s ease-in-out 0s;
+				transform: scale(0.98);
 			}
+			.project-link {
+				display: none;
+				font-size: 20px;
+			}
+			.project-card:hover {
+				cursor: pointer;
+				transform: scale(1.2);
+				transform: translateZ(0);
+				backface-visibility: hidden;
+			}
+			.boxes {
+				box-sizing: border-box;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+				flex-wrap: wrap;
+				column-gap: 5%;
+				max-width: 1000px;
+				list-style: none;
+				margin: 1em auto;
+				padding: 0em 2em 2em 2em;
+			}
+
+			.project-preview {
+				display:inline;
+    			margin-bottom: 0.2em;
+			}
+			.project-title {
+				font-family: title;
+				font-size: 18px;
+				margin: 0;
+			}
+			p {
+				font-family: body;
+				font-size: 18px;
+				margin-bottom: 20px;
+			}
+			.img {
+				width: 60%;
+				margin: auto;
+				display: block;
+			}
+
+			.title {
+				font-size: 26px;
+				letter-spacing: 0.5px;
+				-webkit-text-stroke: 1.2px #588157; 
+				text-shadow: 0.5px 0.5px 0 #588157;
+			}
+
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1 class="title">Projects</h1>
+			<h1>Projects</h1>
 			<section>
-				<ul>
+				<ul class="boxes">
 					{
 						posts.map((post) => (
-							<li>
-								<time datetime={post.data.pubDate.toISOString()}>
-									{post.data.pubDate.toLocaleDateString('en-us', {
-										year: 'numeric',
-										month: 'short',
-										day: 'numeric',
-									})}
-								</time>
-								<a href={`/projects/${post.slug}/`}>{post.data.title}</a>
+							<li class="project-card">
+								<a href={`/projects/${post.slug}/`}>
+									<div class="project-preview">
+										<h1 class="title">{post.data.title}</h1>
+										<p>{post.data.description}</p>
+										<img class="img" src="./frog.png" />
+									</div>
+								</a>
 							</li>
 						))
 					}

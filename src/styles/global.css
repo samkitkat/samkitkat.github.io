@@ -1,12 +1,8 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+
 
  @font-face {
     font-family: title;
-	src: url('./Arbotek/Arbotek-Ultra.otf');
+	src: url('./Fonts/Arbotek/Arbotek-Ultra.otf');
 }
 
 body {
@@ -22,7 +18,7 @@ body {
 }
 
 .title {
-    font-size: 65px;;
+    font-size: 65px;
     font-family: title;
     color: #A3B18A;
     -webkit-text-stroke: 2px #588157; 
@@ -37,12 +33,24 @@ main {
 .contentTitle {
 	font-size: 2.3em;
 	font-family: title;
+	margin-bottom: 0px;
 	color: #A3B18A;
 	-webkit-text-stroke: 1px #588157; 
 	text-shadow: 1px 1px 0 #588157;
 }
 
-h1,
+.date {
+	font-size: 14px;
+}
+
+h1 {
+	font-size: 65px;
+    font-family: title;
+    color: #A3B18A;
+    -webkit-text-stroke: 2px #588157; 
+    text-shadow: 2px 2px 0 #588157;
+}
+
 h2,
 h3,
 h4,
@@ -58,7 +66,8 @@ a {
 nav a {
 	margin-right: 10px;
 	line-height: 0px;
-	font-size: 23px;
+	font-size: 26px;
+	letter-spacing: 0.5px;
 	font-family: title;
 	color: #A3B18A;
 	-webkit-text-stroke: 0.8px #588157; 
