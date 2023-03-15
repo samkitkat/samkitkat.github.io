@@ -2,6 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import Socials from '../../components/Socials.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('projects')).sort(
@@ -101,7 +102,7 @@ const posts = (await getCollection('projects')).sort(
 									<div class="project-preview">
 										<h1 class="title">{post.data.title}</h1>
 										<p>{post.data.description}</p>
-										<img class="img" src="./frog.png" />
+										<img class="img" src="./assets/images/frog.png" />
 									</div>
 								</a>
 							</li>
@@ -111,5 +112,6 @@ const posts = (await getCollection('projects')).sort(
 			</section>
 		</main>
 		<Footer />
+		<Socials />
 	</body>
 </html>

@@ -1,6 +1,7 @@
 ---
 import '../../styles/me.css';
-import { twitch, twitter, youtube, tiktok, insta, kofi } from '../../consts';
+import { links } from '../../consts';
+import Socials from '../../components/Socials.astro';
 const today = new Date();
 ---
 
@@ -10,7 +11,7 @@ const today = new Date();
 		<meta charset="utf-8" />
         <title> ♡ samkitkat links ♡ </title>
         <meta name="viewport" content="width = device-width, initial-scale=1" />
-        <link rel="icon" href="/frog.png">
+        <link rel="icon" href="/assets/images/frog.png">
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
 		<script is:inline src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 		<script is:inline>
@@ -49,39 +50,24 @@ const today = new Date();
                 <img class="pic" src="/assets/images/selfie.jpg">
 
                 <div class="nameBox">
-                    <h1 class="name">samkitkat</h1>
+                    <a href="/" target="_blank" rel="noopener noreferrer">
+                        <h1 class="name">samkitkat</h1>
+                    </a>
                 </div>
 
-                <nav id="socials" class="socials">
-                    <a class="icon1" href={twitch} target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/twitch.svg" alt="twitch" width="20" />
-                    </a>
-                    <a class="icon1" href={twitter} target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/twitter.svg" alt="twitter" width="20" />
-                    </a>
-                    <a class="icon1" href={youtube} target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/youtube.svg" alt="youtube" width="20" />
-                        
-                    </a>
-                    <a class="icon1" href={tiktok} target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/tiktok.svg" alt="tiktok" width="20" />
-                    </a>
-                    <a class="icon1" href={insta} target="_blank" rel="noopener noreferrer">
-                        <img src="/assets/icons/insta.svg" alt="instagram" width="20" />
-                    </a>
-                </nav>
+                <Socials />
                 
                 <div class="bio">
                     <p>🌿 Just a coder girl in a coder world 🌿</p>
                     <p> I stream tech stuff on twitch tue-thurs 1pm pst </p>
                 </div>
-                
             </header>
+
              <ul class="boxes">
                 <li class="box">
-                    <a href={kofi} target="_blank" rel="noopener noreferrer">
+                    <a href={links.kofi.url} target="_blank" rel="noopener noreferrer">
                         <div class="info">
-                            <img class="icon" src="/assets/icons/kofi.svg" alt="coursera" width="20" />
+                            <img class="icon" src={links.kofi.icon} alt="coursera" width="20" />
                             <h3 class="title">Buy Me A Coffee</h3>
                         </div>
                         <p class="p">Your support is always appreciated</p>
@@ -106,9 +92,9 @@ const today = new Date();
                     </a>
                 </li>
                 <li class="box">
-                    <a href="https://discord.gg/VTFWs5Sx8f" target="_blank" rel="noopener noreferrer">
+                    <a href={links.discord.url} target="_blank" rel="noopener noreferrer">
                         <div class="info">                        
-                            <img class="icon" src="/assets/icons/discord.svg" alt="discord" width="20" />
+                            <img class="icon" src={links.discord.icon} alt="discord" width="20" />
                             <h3 class="title">Our Discord</h3> 
                         </div>
                         <p class="p">Learn and vibe with us in the discord!</p>

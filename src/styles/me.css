@@ -53,7 +53,7 @@ header {
     width: 8em;
     height: 8em;
     border-radius: 100px;
-    border: 1px solid #fff;
+    border: 1px solid #A3B18A;
     box-shadow: rgb(28 32 93 /24%) 0px 2px 8px 0px;
 }
 
@@ -101,18 +101,17 @@ header {
     display: inline-block;
     font-size: 14px;
     letter-spacing: 0px;
-    line-height: 5px;
     border-radius: 1em;
     background-color: rgba(88, 129, 87, 0.667);
     color: rgb(255, 255, 255);
-    padding: 0.5em 0.8em;
+    padding: 0.7em 1em;
     border: 0.8px solid #fffa;
     box-shadow: rgba(255, 255, 170, 0.24) 0px 2px 8px 0px;
     backdrop-filter: blur(10px) saturate(100%) contrast(160%);
     -webkit-backdrop-filter: blur(10px) saturate(160%) contrast(180%);
 }
 .bio p {
-    margin: 12px;
+    margin: 0px;
 }
 
 .boxes {

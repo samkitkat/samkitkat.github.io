@@ -62,8 +62,8 @@ b {
 }
 a {
 	color: #588157;
-}
-nav a {
+} 
+nav a{
 	margin-right: 10px;
 	line-height: 0px;
 	font-size: 26px;
@@ -106,4 +106,35 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 10px;
+	text-align: center;
+	padding-bottom: 5rem;
+}
+.icon1 {
+    background-color: rgba(88, 129, 87, 0.667);
+    width: 20px;
+    height: 20px;
+    border-radius: 1em;
+    padding: .5em;
+	margin-right: 3px;
+    transition: .3s ease-in-out 0s;
+    transform: scale(0.98);
+}
+.icon1:hover {
+    cursor: pointer;
+    transform: scale(1);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+.socials > a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-size: 1.1em;
 }
