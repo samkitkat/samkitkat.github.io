@@ -15,6 +15,7 @@ const posts = (await getCollection('projects')).sort(
 	<head>
 		<BaseHead />
 		<style>
+
 			h1 {
 				text-align: center;
 			}
@@ -23,13 +24,13 @@ const posts = (await getCollection('projects')).sort(
 			}
 			ul li {
 				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 			a {
 				text-decoration: none;
 			}
 			.project-card {
-				align-items: center;
-				justify-content: center;
 				background-color: rgba(163, 177, 138, 0.667);
 				border-radius: 1em;
 				padding: 1em;
@@ -57,7 +58,7 @@ const posts = (await getCollection('projects')).sort(
 				max-width: 1000px;
 				list-style: none;
 				margin: 1em auto;
-				padding: 0em 2em 2em 2em;
+				padding: 0px;
 			}
 
 			.project-preview {
@@ -73,6 +74,8 @@ const posts = (await getCollection('projects')).sort(
 				font-family: body;
 				font-size: 18px;
 				margin-bottom: 20px;
+				display: flex;
+				justify-content: center;
 			}
 			.img {
 				width: 60%;
