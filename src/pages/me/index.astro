@@ -2,7 +2,7 @@
 import "../../styles/me.css";
 import { links } from "../../consts";
 import Socials from "../../components/Socials.astro";
-import Footer from "../../components/Footer.astro";
+const today = new Date();
 ---
 
 <!DOCTYPE html>
@@ -159,7 +159,9 @@ import Footer from "../../components/Footer.astro";
           </div>
         </li>
       </ul>
-      <Footer />
+      <footer class="footer">
+        <h1>♡ {today.getFullYear()} سمر ♡</h1>
+      </footer>
     </main>
   </body>
 </html>
