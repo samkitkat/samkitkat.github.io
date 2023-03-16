@@ -13,7 +13,7 @@ const posts = (await getCollection('projects')).sort(
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead />
+		<BaseHead title="projects" description="hello"/>
 		<style>
 
 			h1 {
@@ -105,7 +105,7 @@ const posts = (await getCollection('projects')).sort(
 									<div class="project-preview">
 										<h1 class="title">{post.data.title}</h1>
 										<p>{post.data.description}</p>
-										<img class="img" src="./assets/images/frog.png" />
+										<img class="img" src="/assets/images/frog.png" />
 									</div>
 								</a>
 							</li>

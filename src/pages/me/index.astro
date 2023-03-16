@@ -1,125 +1,165 @@
 ---
-import '../../styles/me.css';
-import { links } from '../../consts';
-import Socials from '../../components/Socials.astro';
-const today = new Date();
+import "../../styles/me.css";
+import { links } from "../../consts";
+import Socials from "../../components/Socials.astro";
+import Footer from "../../components/Footer.astro";
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="utf-8" />
-        <title> ♡ samkitkat links ♡ </title>
-        <meta name="viewport" content="width = device-width, initial-scale=1" />
-        <link rel="icon" href="/assets/images/frog.png">
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-		<script is:inline src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-		<script is:inline>
-			window.addEventListener('DOMContentLoaded', () => {
-				VANTA.BIRDS({
-					el: 'body',
-					mouseControls: true,
-					touchControls: true,
-					gyroControls: false,
-					minHeight: 200.00,
-					minWidth: 200.00,
-					scale: 1.00,
-					scaleMobile: 1.00,
-					color1: 0x83b7d7,
-					color2: 0xedcdea,
-					colorMode: "variance",
-					birdSize: 2.00,
-					wingSpan: 12.00,
-					speedLimit: 3.00,
-					separation: 10.00,
-					alignment: 12.00,
-					cohesion: 41.00,
-					quantity: 2.0,
-					speedLimit: 10.00,
-					backgroundAlpha: 0.00
-				})
-			})
-		</script>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <title>♡ samkitkat links ♡</title>
+    <meta name="viewport" content="width = device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/images/frog.png" />
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+    ></script>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"
+    ></script>
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", () => {
+        VANTA.BIRDS({
+          el: "body",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color1: 0x83b7d7,
+          color2: 0xedcdea,
+          colorMode: "variance",
+          birdSize: 2.0,
+          wingSpan: 12.0,
+          speedLimit: 3.0,
+          separation: 10.0,
+          alignment: 12.0,
+          cohesion: 41.0,
+          quantity: 2.0,
+          speedLimit: 10.0,
+          backgroundAlpha: 0.0,
+        });
+      });
+    </script>
+  </head>
 
-    <body>
-        <div id="vanta" style="position: absolute"></div>
-        <main>
-            <header>
-                <!-- <h1>Hello World!</h1> -->
-                <img class="pic" src="/assets/images/selfie.jpg">
+  <body>
+    <div id="vanta" style="position: absolute"></div>
+    <main>
+      <header>
+        <!-- <h1>Hello World!</h1> -->
+        <img class="pic" src="/assets/images/selfie.jpg" />
 
-                <div class="nameBox">
-                    <a href="/" target="_blank" rel="noopener noreferrer">
-                        <h1 class="name">samkitkat</h1>
-                    </a>
-                </div>
+        <div class="nameBox">
+          <a href="/" target="_blank" rel="noopener noreferrer">
+            <h1 class="name">samkitkat</h1>
+          </a>
+        </div>
 
-                <Socials />
-                
-                <div class="bio">
-                    <p>🌿 Just a coder girl in a coder world 🌿</p>
-                    <p> I stream tech stuff on twitch tue-thurs 1pm pst </p>
-                </div>
-            </header>
+        <Socials />
 
-             <ul class="boxes">
-                <li class="box">
-                    <a href={links.kofi.url} target="_blank" rel="noopener noreferrer">
-                        <div class="info">
-                            <img class="icon" src={links.kofi.icon} alt="coursera" width="20" />
-                            <h3 class="title">Buy Me A Coffee</h3>
-                        </div>
-                        <p class="p">Your support is always appreciated</p>
-                    </a>
-                </li>
-                <li class="box">
-                    <a href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f" target="_blank" rel="noopener noreferrer">
-                        <div class="info">
-                            <img class="icon" src="/assets/icons/book.svg" alt="civictech" width="20" />
-                            <h3 class="title">Civic Tech Opportunities</h3>
-                        </div>
-                        <p class="p">Notion database of civic tech jobs, intenships, and volunteer opps</p>
-                    </a>
-                </li>
-                <li class="box">
-                    <a href="https://fine-writer-bd0.notion.site/React-Tutorial-Schedule-Template-985a7c821b6f4031ab9890bf9b4537cb" target="_blank" rel="noopener noreferrer">
-                        <div class="info">
-                            <img class="icon" src="/assets/icons/book.svg" alt="react" width="20" align="left" />
-                            <h3 class="title">Beginner React Schedule</h3>
-                        </div>
-                        <p class="p">Follow along our scrimba react learning journey with this schedule</p>
-                    </a>
-                </li>
-                <li class="box">
-                    <a href={links.discord.url} target="_blank" rel="noopener noreferrer">
-                        <div class="info">                        
-                            <img class="icon" src={links.discord.icon} alt="discord" width="20" />
-                            <h3 class="title">Our Discord</h3> 
-                        </div>
-                        <p class="p">Learn and vibe with us in the discord!</p>
-                    </a>
-                </li>
-                <li class="box">
-                    <div class="frame1">
-                        <iframe class="frame" src="https://www.youtube.com/embed/7BHSpFfgFh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </li>
-                <li class="box">
-                    <div class="frame1">
-                        <iframe 
-                            class="frame"  
-                            src="https://player.twitch.tv/?collection=rpVYg7cV3RZbUA&parent=samkitkat.github.io&muted=true"
-                            allowfullscreen="true" 
-                        </iframe>
-                    </div>
-                </li>
-            </ul>
-            <footer class="footer">
-                <h1>♡ {today.getFullYear()} سمر ♡</h1>
-            </footer>
-        </main>
-        <!-- <script type="text/javascript" src="./fieldData.js"></script>
-        <script type="text/javascript" src="./index.js"></script> -->
-    </body>
+        <div class="bio">
+          <p>🌿 Just a coder girl in a coder world 🌿</p>
+          <p>I stream tech stuff on twitch tue-thurs 1pm pst</p>
+        </div>
+      </header>
+
+      <ul class="boxes">
+        <li class="box">
+          <a href={links.kofi.url} target="_blank" rel="noopener noreferrer">
+            <div class="info">
+              <img
+                class="icon"
+                src={links.kofi.icon}
+                alt="coursera"
+                width="20"
+              />
+              <h3 class="title">Buy Me A Coffee</h3>
+            </div>
+            <p class="p">Your support is always appreciated</p>
+          </a>
+        </li>
+        <li class="box">
+          <a
+            href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="info">
+              <img
+                class="icon"
+                src="/assets/icons/book.svg"
+                alt="civictech"
+                width="20"
+              />
+              <h3 class="title">Civic Tech Opportunities</h3>
+            </div>
+            <p class="p">
+              Notion database of civic tech jobs, intenships, and volunteer opps
+            </p>
+          </a>
+        </li>
+        <li class="box">
+          <a
+            href="https://fine-writer-bd0.notion.site/React-Tutorial-Schedule-Template-985a7c821b6f4031ab9890bf9b4537cb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="info">
+              <img
+                class="icon"
+                src="/assets/icons/book.svg"
+                alt="react"
+                width="20"
+              />
+              <h3 class="title">Beginner React Schedule</h3>
+            </div>
+            <p class="p">
+              Follow along our scrimba react learning journey with this schedule
+            </p>
+          </a>
+        </li>
+        <li class="box">
+          <a href={links.discord.url} target="_blank" rel="noopener noreferrer">
+            <div class="info">
+              <img
+                class="icon"
+                src={links.discord.icon}
+                alt="discord"
+                width="20"
+              />
+              <h3 class="title">Our Discord</h3>
+            </div>
+            <p class="p">Learn and vibe with us in the discord!</p>
+          </a>
+        </li>
+        <li class="box">
+          <div class="frame1">
+            <iframe
+              class="frame"
+              src={links.iframeYoutube.url}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </li>
+        <li class="box">
+          <div class="frame1">
+            <iframe
+              class="frame"
+              src={links.iframeTwitch.url}
+              allowfullscreen="true"
+            >
+            </iframe>
+          </div>
+        </li>
+      </ul>
+      <Footer />
+    </main>
+  </body>
 </html>
