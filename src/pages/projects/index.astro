@@ -15,7 +15,7 @@ const posts = (await getCollection('projects')).sort(
 		<BaseHead title="projects" description="hello"/>
 		<style>
 
-			h1 {
+			.title {
 				text-align: center;
 			}
 			ul {
@@ -103,7 +103,6 @@ const posts = (await getCollection('projects')).sort(
 								<a href={`/projects/${post.slug}/`}>
 									<div class="project-preview">
 										<h1 class="title">{post.data.title}</h1>
-										<p>{post.data.description}</p>
 									</div>
 								</a>
 							</li>

@@ -9,16 +9,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			h1 {
+				margin-bottom: 1px;
+				}
+			Header {
+				margin-bottom: 3em;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1 class="title">Welcome!</h1>
+			<h1 class="title">Hello!</h1>
 			<p>
 				Welcome to the official samkitkat portfolio site. we have a blog page and a project page.
 				feel free to explore and look at them.
 			</p>
-
 		</main>
 		<Footer />
 	</body>
