@@ -18,7 +18,7 @@ body {
 }
 
 .title {
-    font-size: 65px;
+    font-size: 60px;
     font-family: title;
     color: #A3B18A;
     -webkit-text-stroke: 2px #588157; 
@@ -27,7 +27,7 @@ body {
 
 main {
 	margin: 1em;
-	padding: 2em 0em 2em 0em;
+	padding: 1em 0em 2em 0em;
 }
 
 .contentTitle {
@@ -49,6 +49,7 @@ h1 {
     color: #A3B18A;
     -webkit-text-stroke: 2px #588157; 
     text-shadow: 2px 2px 0 #588157;
+	letter-spacing: 1px;
 }
 
 h2,
@@ -73,6 +74,10 @@ nav a{
 	-webkit-text-stroke: 0.8px #588157; 
 	text-shadow: 0.5px 0.5px 0 #588157;
 }
+a.active {
+    font-weight: bolder;
+    text-decoration: #a3b18a wavy underline;
+  }
 textarea {
 	width: 100%;
 	font-size: 16px;

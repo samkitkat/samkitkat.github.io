@@ -3,11 +3,10 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import Socials from '../components/Socials.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, projectURL } = Astro.props;
 ---
 
 <html lang="en">
@@ -27,6 +26,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			<article>
 
 				<h1 class="contentTitle">{title}</h1>
+				<a href="/" target="_blank" rel="noopener noreferrer">
+					<p>www.samkitkat.com</p>
+				</a>
 				{pubDate && <p class="date">{pubDate.toLocaleDateString('en-US')}</p>}
 				{
 					updatedDate && (
@@ -41,6 +43,5 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		</main>
 		<!-- {heroImage && <img width={720} height={360} src={heroImage} alt="" />} -->
 		<Footer />
-		<Socials />
 	</body>
 </html>

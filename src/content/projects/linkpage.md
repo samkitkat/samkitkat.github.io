@@ -4,7 +4,7 @@ description: "see all my socials in one place"
 pubDate: "March 16 2023"
 heroImage: "/placeholder-hero.jpg"
 tags: ["html", "css", "javascript"]
-projectURL: "https://samkitkat.github.io/me/"
+projectURL: "https://samkitkat.github.io/"
 ---
 
 As an individual with multiple online profiles across various social media platforms, I always found it challenging to manage and share them effectively. I wanted to showcase my online presence in one place, and that's when I stumbled upon Linktree.
@@ -30,6 +30,6 @@ Here is how V1 of my link page turned out ⇩
 
 ### V3
 
-check out the final product [**here**](https://samkitkat.github.io/me/)!
+check out the final product [**here**](/)!
 
 Overall, creating my own Linktree clone was a fun and rewarding experience. It allowed me to showcase my skills as a web developer and create something that was useful for myself and my followers. If you're a web developer, I highly recommend trying to create your own Linktree clone. It's a fun project that you can customize to your liking and showcase your skills in the process.

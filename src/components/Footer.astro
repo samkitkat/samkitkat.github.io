@@ -1,16 +1,21 @@
 ---
 const today = new Date();
+import Socials from "./Socials.astro";
 ---
 
-<footer>
-  <h1>♡ {today.getFullYear()} سمر ♡</h1>
-</footer>
+  <footer>
+    <h1>♡ {today.getFullYear()} سمر ♡</h1>
+    <Socials />
+  </footer>
 
 <style>
-
   footer {
-    text-align: center;
-    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    top: 5em;
   }
   h1 {
     font-family: title;
