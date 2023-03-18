@@ -34,7 +34,7 @@ export const links = {
     icon: "/assets/icons/discord.svg"
   },
   iframeTwitch: {
-    url: "https://player.twitch.tv/?collection=rpVYg7cV3RZbUA&parent=samkitkat.com&muted=true"
+    url: "https://player.twitch.tv/?collection=rpVYg7cV3RZbUA&parent=www.samkitkat.com&muted=true"
   },
   iframeYoutube: {
     url: "https://www.youtube.com/embed/7BHSpFfgFh4"
