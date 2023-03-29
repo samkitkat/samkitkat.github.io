@@ -7,4 +7,6 @@ tags: ["html", "css", "javascript"]
 projectURL: "https://www.samkitkat.com/vdaycardgen"
 ---
 
-made a tumblr valentines day car generator <3 check it out here: https://samkitkat.github.io/vdaycardgen/
+Plain HTML/CSS page with a image gallery for you to click through. With editable text boxes for you to add your and your crush's name to then drag onto the valentine card. You would then screenshot and send to your valentine!
+
+<div align="center"><img src="../../assets/images/vdayimg.png"></div>

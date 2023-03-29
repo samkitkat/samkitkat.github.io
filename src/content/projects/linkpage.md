@@ -13,7 +13,7 @@ Linktree is a popular tool used by influencers, artists, and businesses to share
 
 However, as a web developer, I always enjoy building things myself, so I decided to create my own Linktree clone. I knew it would be a fun project that would allow me to showcase my skills and create something that would be useful for myself.
 
-## The Process
+### The Process
 
 ### V1
 
@@ -30,6 +30,6 @@ Here is how V1 of my link page turned out ⇩
 
 ### V3
 
-check out the final product [**here**](/)!
+Check out the final product [**here**](/)!
 
 Overall, creating my own Linktree clone was a fun and rewarding experience. It allowed me to showcase my skills as a web developer and create something that was useful for myself and my followers. If you're a web developer, I highly recommend trying to create your own Linktree clone. It's a fun project that you can customize to your liking and showcase your skills in the process.
