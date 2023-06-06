@@ -20,8 +20,13 @@ const { title, description, pubDate, projectURL, updatedDate } = Astro.props;
 			a {
 				text-decoration: #a3b18a underline;
 			}
-			p {
-				font-weight: ;
+			.project-site {
+				display: flex;
+				align-items: center;
+				margin: 5px;
+			}
+			.project-site div {
+				margin: 5px;
 			}
 		</style>
 	</head>
@@ -32,17 +37,24 @@ const { title, description, pubDate, projectURL, updatedDate } = Astro.props;
 			<article>
 
 				<h1 class="contentTitle">{title}</h1>
-				<a href={projectURL} target="_blank" rel="noopener noreferrer">
-					<h2>➪ view site</h2>
-				</a>
-				{pubDate && <p class="date">{pubDate.toLocaleDateString('en-US')}</p>}
-				{
-					updatedDate && (
-						<div>
-							Last updated on <time>{updatedDate}</time>
-						</div>
-					)
-				}
+
+				<div class="project-site">
+
+					{pubDate && <p class="date">{pubDate.toLocaleDateString('en-US')}</p>}
+					{
+						updatedDate && (
+							<div>
+								Last updated on <time>{updatedDate}</time>
+							</div>
+						)
+					}
+					<div>
+						<a href={projectURL} target="_blank" rel="noopener noreferrer">
+							<h4>view site</h4>
+						</a>
+					</div>
+				</div>
+
 				<hr />
 				<slot />
 			</article>

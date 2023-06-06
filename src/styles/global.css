@@ -5,8 +5,14 @@
 	src: url('./Fonts/Arbotek/Arbotek-Ultra.otf');
 }
 
+@font-face {
+    font-family: fonttext;
+	src: url('./Fonts/ComicMono.ttf');
+}
+
 body {
-	font-family: Verdana, sans-serif;
+	font-family: Comic, Verdana, sans-serif;
+	font-size: 17px;
 	margin: auto;
 	padding: 40px;
 	padding-top: 6em;
@@ -15,7 +21,7 @@ body {
 	background-color: #DAD7CD;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	color: #444;
+	color: #2e4038;
 }
 
 .title {
@@ -51,13 +57,19 @@ h1 {
     text-shadow: 2px 2px 0 #588157;
 	letter-spacing: 1px;
 }
-h2 {
+h2{
+	font-size: 42px;
+	font-family: title;
+    color: #588157;
+}
+h3{
+	font-size: 18px;
+    color: #588157;
+}
+h4{
 	font-size: 14px;
     color: #588157;
 }
-
-h3,
-h4,
 h5,
 h6,
 strong,
