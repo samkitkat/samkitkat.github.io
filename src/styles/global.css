@@ -1,6 +1,4 @@
-
-
- @font-face {
+@font-face {
     font-family: title;
 	src: url('./Fonts/Arbotek/Arbotek-Ultra.otf');
 }
@@ -9,6 +7,10 @@
     font-family: fonttext;
 	src: url('./Fonts/ComicMono.ttf');
 }
+
+::selection {
+	background: #A3B18A;
+  }
 
 body {
 	font-family: Comic, Verdana, sans-serif;
