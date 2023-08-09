@@ -98,9 +98,9 @@ const posts = (await getCollection('projects')).sort(
 			<section>
 				<ul class="boxes">
 					{
-						posts.map((post) => (
+						posts.reverse().map((post) => (
 							<li class="project-card">
-								<a href={`/projects/${post.slug}/`}>
+								<a href={`${post.data.projectURL}`}>
 									<div class="project-preview">
 										<h1 class="title">{post.data.title}</h1>
 									</div>

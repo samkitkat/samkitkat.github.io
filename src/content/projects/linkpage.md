@@ -1,5 +1,5 @@
 ---
-title: "Site for Socials"
+title: "My Personal Linktree"
 description: "see all my socials in one place"
 pubDate: "March 16 2023"
 heroImage: "/placeholder-hero.jpg"

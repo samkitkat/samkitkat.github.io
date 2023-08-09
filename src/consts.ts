@@ -9,6 +9,10 @@ export const links = {
     url: "https://www.twitch.tv/samkitkat",
     icon: "/assets/icons/twitch.svg"
   },
+  tumblr: {
+    url: "https://kitkatcodes.tumblr.com/",
+    icon: "/assets/icons/tumblr.svg"
+  },
   twitter: {
     url: "https://twitter.com/samkitkat_",
     icon: "/assets/icons/twitter.svg"
@@ -37,6 +41,6 @@ export const links = {
     url: "https://player.twitch.tv/?collection=rpVYg7cV3RZbUA&parent=www.samkitkat.com&muted=true"
   },
   iframeYoutube: {
-    url: "https://www.youtube.com/embed/7BHSpFfgFh4"
+    url: "https://www.youtube.com/embed/ZG7CoCgluLQ"
   }
 };

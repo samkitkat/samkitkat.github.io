@@ -1,5 +1,5 @@
 ---
-title: "Courier Cheerleader: Boosting Productivity with Automated Encouragement! 🎉"
+title: "Boosting Productivity with Automated Encouragement! 🎉"
 description: "Courier"
 pubDate: "June 5 2023"
 heroImage: "/placeholder-hero.jpg"
@@ -153,5 +153,12 @@ And just like that, voila! 🎉
 The automation is now set up, and your carefully crafted notification will be sent to the intended recipient.
 
 Exploring how Courier collaborates with Segment to send notifications was an incredibly enjoyable learning experience for me. If you're interested in delving further into the code or experimenting with the app, feel free to visit the <a href="https://github.com/samkitkat/todo-app" target="_blank" rel="noopener noreferrer">Github Repo</a> and <a href="https://todo-app-samkitkat.vercel.app/" target="_blank" rel="noopener noreferrer">Todo App</a>. Please note that this project is still a work in progress, so be sure to stay tuned for future updates and enhancements!
+
+<a href="https://www.courier.com/blog/intro-to-your-courier-cheerleading-catalyst/" target="_blank" rel="noopener noreferrer">
+read this same article but on the courier site!
+</a>
+
+<br>
+<br>
 
 ---

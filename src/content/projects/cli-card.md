@@ -1,5 +1,5 @@
 ---
-title: "CLI Card"
+title: "My Personal CLI Card"
 description: "npx samkitkat"
 pubDate: "July 12 2022"
 heroImage: "/placeholder-hero.jpg"

@@ -2,18 +2,33 @@
 import HeaderLink from "./HeaderLink.astro";
 ---
 
-<header>
+<div class="line"></div>
+  <header>
   <nav class="header">
-    <HeaderLink href="/portfolio">Home</HeaderLink>
-    <HeaderLink href="/projects">Projects</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
+    <HeaderLink class="hover-underline-animation" href="/portfolio">Home</HeaderLink>
+    <HeaderLink class="hover-underline-animation" href="/projects">Projects</HeaderLink>
+    <HeaderLink class="hover-underline-animation" href="/blog">Blog</HeaderLink>
   </nav>
 </header>
+
 <style>
+  .line {
+    display: flex;
+    padding: 0.4rem;
+    justify-content: right;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #594D40;
+    background-color: #594D40;
+  }
   header {
     display: flex;
-    margin: 1em 0em 2em 0em;
+    margin: -0.4em 0em 2em 0em;
+    padding: 0.4rem;
     justify-content: right;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #594D40;
   }
   @media only screen and (max-width: 680px) {
     header {

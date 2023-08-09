@@ -16,9 +16,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
       Header {
         margin-bottom: 3em;
       }
+      p {
+        line-height: 1.39rem;
+      }
+      .hehe {
+        text-align: right;
+        font-size: 10px;
+      }
+      a {
+        position: relative;
+        color: #594D40;
+      }
     </style>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -34,10 +46,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
     <main>
       <h1 class="title">Hello!</h1>
       <p>
-        Hey there!👋 I'm a fullstack engineer and developer advocate.
-        <br />Check out my super fun <a href="/projects">projects</a>.
-        <br />Check out my cool <a href="/">link page</a>.
+        Hey there!👋 I'm a fullstack engineer and developer advocate
+        <br />Check out my super fun 
+        <a class="hover-underline-animation" href="/projects">projects</a>
+        <br />Check out my cool 
+        <a class="hover-underline-animation" href="/" target="_blank" rel="noopener noreferrer">link page</a>
       </p>
+      <p class="hehe">hire me plz</p>
     </main>
     <Footer />
   </body>
