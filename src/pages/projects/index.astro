@@ -1,116 +1,92 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { getCollection } from 'astro:content';
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
 
-const posts = (await getCollection('projects')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+const posts = (await getCollection("projects")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title="projects" description="hello"/>
-		<style>
-
-			.title {
-				text-align: center;
-			}
-			ul {
-				list-style-type: none;
-			}
-			ul li {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-			a {
-				text-decoration: none;
-			}
-			.project-card {
-				background-color: rgba(163, 177, 138, 0.667);
-				border-radius: 1em;
-				padding: 1em;
-				margin-bottom: 1em;
-				box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
-				transition: .3s ease-in-out 0s;
-				transform: scale(0.98);
-			}
-			.project-link {
-				display: none;
-				font-size: 20px;
-			}
-			.project-card:hover {
-				cursor: pointer;
-				transform: scale(1.2);
-				transform: translateZ(0);
-				backface-visibility: hidden;
-			}
-			.boxes {
-				box-sizing: border-box;
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-				flex-wrap: wrap;
-				column-gap: 5%;
-				max-width: 1000px;
-				list-style: none;
-				margin: 1em auto;
-				padding: 0px;
-			}
-
-			.project-preview {
-				display:inline;
-    			margin-bottom: 0.2em;
-			}
-			.project-title {
-				font-family: title;
-				font-size: 18px;
-				margin: 0;
-			}
-			p {
-				font-family: body;
-				font-size: 18px;
-				margin-bottom: 20px;
-				display: flex;
-				justify-content: center;
-			}
-			.img {
-				width: 60%;
-				margin: auto;
-				display: block;
-			}
-
-			.title {
-				font-size: 26px;
-				letter-spacing: 0.5px;
-				-webkit-text-stroke: 1.2px #588157; 
-				text-shadow: 0.5px 0.5px 0 #588157;
-			}
-
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>Projects</h1>
-			<section>
-				<ul class="boxes">
-					{
-						posts.reverse().map((post) => (
-							<li class="project-card">
-								<a href={`${post.data.projectURL}`}>
-									<div class="project-preview">
-										<h1 class="title">{post.data.title}</h1>
-									</div>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title="projects" description="hello" />
+    <style>
+	  .title {
+		text-align: center;
+        font-size: 26px;
+        letter-spacing: 0.5px;
+        -webkit-text-stroke: 1.2px #588157;
+        text-shadow: 0.5px 0.5px 0 #588157;
+      }
+	  ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      a {
+        text-decoration: none;
+		display: block;
+		padding: 10px;
+      }
+      .project-card {
+        margin-bottom: 1em;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: #594d40;
+        box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+        transition: 0.3s ease-in-out 0s;
+      }
+      .project-link {
+        display: none;
+        font-size: 20px;
+      }
+      .project-card:hover {
+        cursor: url("http://www.rw-designer.com/cursor-extern.php?id=163731"),
+          auto;
+        transition: 0.3s ease-in-out 0s;
+        transform: scale(0.98);
+      }
+      .boxes {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        flex-wrap: wrap;
+        column-gap: 5%;
+        max-width: 1000px;
+        list-style: none;
+        margin: 1em auto;
+        padding: 0px;
+      }
+      p {
+        font-family: body;
+        font-size: 18px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Projects</h1>
+      <section>
+        <ul class="boxes">
+          {
+            posts.reverse().map((post) => (
+              <li class="project-card">
+                <a href={`${post.data.projectURL}`}>
+                    <h1 class="title">{post.data.title}</h1>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>

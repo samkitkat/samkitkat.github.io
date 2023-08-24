@@ -1,6 +1,6 @@
 ---
 title: "Interactive Twitch Gradient Changer"
-description: "for twitch chat"
+description: "As a developer, one of the most exciting things to work on is a project that integrates with a platform or service that you're passionate about. For me, that platform is Twitch. Here is a project I built using the Twitch API."
 pubDate: "May 17 2022"
 heroImage: "/placeholder-hero.jpg"
 tags: ["react", "twitch", "api"]

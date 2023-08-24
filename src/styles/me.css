@@ -13,7 +13,12 @@
     src: url('./Fonts/Work_Sans/static/WorkSans-ExtraBold.ttf');
 }
 
+::selection {
+    background: #a3b18a;
+  }  
+
 body, html {
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163735'), auto;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -80,7 +85,7 @@ header {
     transform: scale(0.98);
 }
 .icon1:hover {
-    cursor: pointer;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
     transform: scale(1);
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -93,7 +98,7 @@ header {
     align-self: center;
     justify-content: center;
     justify-content: space-around;
-    width: 200px;
+    width: 330px;
 }
 
 .bio {
@@ -136,7 +141,7 @@ ul > li {
     transform: scale(0.98);
 }
 .box:hover {
-    cursor: pointer;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
     transform: scale(1.2);
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -191,6 +196,7 @@ a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.1em;
+    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
 }
 
 .footer {

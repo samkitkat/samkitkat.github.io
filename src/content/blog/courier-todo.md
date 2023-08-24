@@ -1,6 +1,6 @@
 ---
 title: "Boosting Productivity with Automated Encouragement! 🎉"
-description: "Courier"
+description: "I absolutely ADORE a good todo app. Todo apps can be an invaluable tool for improving productivity, helping you stay organized and manage tasks effectively. Here is my take on the popular Todo App."
 pubDate: "June 5 2023"
 heroImage: "/placeholder-hero.jpg"
 tags: ["react", "nextjs", "courier", "segment"]

@@ -14,6 +14,7 @@
 
 body {
   font-family: Comic, Verdana, sans-serif;
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163735'), auto;
   font-size: 17px;
   margin: auto;
   padding: 40px;
@@ -81,6 +82,7 @@ b {
 a {
   color: #588157;
   text-underline-offset: 3px;
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
 }
 nav a {
   margin-right: 30px;
@@ -164,18 +166,19 @@ blockquote {
   height: 20px;
   border-radius: 1em;
   padding: 0.5em;
-  margin-right: 3px;
+  margin-right: 5px;
   transition: 0.3s ease-in-out 0s;
   transform: scale(0.98);
 }
 .icon1:hover {
-  cursor: pointer;
+  cursor: url("http://www.rw-designer.com/cursor-extern.php?id=163731"), auto;
   transform: scale(1);
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
 .socials > a {
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 1.1em;
