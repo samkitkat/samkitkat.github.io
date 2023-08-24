@@ -18,7 +18,7 @@
   }  
 
 body, html {
-    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163735'), auto;
+    cursor: url('/assets/cursors/main.cur'), auto;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -85,7 +85,7 @@ header {
     transform: scale(0.98);
 }
 .icon1:hover {
-    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
+    cursor: url('/assets/cursors/select.cur'), auto;
     transform: scale(1);
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -141,7 +141,7 @@ ul > li {
     transform: scale(0.98);
 }
 .box:hover {
-    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
+    cursor: url('/assets/cursors/select.cur'), auto;
     transform: scale(1.2);
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -196,7 +196,7 @@ a {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 1.1em;
-    cursor: url('http://www.rw-designer.com/cursor-extern.php?id=163731'), auto;
+    cursor: url('/assets/cursors/select.cur'), auto;
 }
 
 .footer {
