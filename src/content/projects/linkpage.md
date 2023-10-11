@@ -3,7 +3,7 @@ title: "My Personal Linktree"
 description: "see all my socials in one place"
 pubDate: "March 16 2023"
 heroImage: "/placeholder-hero.jpg"
-tags: ["html", "css", "javascript"]
+tags: ["html", "css", "js"]
 projectURL: "https://www.samkitkat.com/"
 ---
 

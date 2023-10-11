@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: fonttext;
+  font-family: body;
   src: url("./Fonts/ComicMono.ttf");
 }
 
@@ -12,27 +12,36 @@
   background: #a3b18a;
 }
 
+:root {
+  --light-brown: #dad7cd;
+  --light-green: #a3b18a;
+  --dark-green: #588157;
+  --text-color: #2e4038;
+  --border-brown: #594d40;
+  --nav-color: #594d40;
+}
+
 body {
-  font-family: Comic, Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   cursor: url('/assets/cursors/main.cur'), auto;
   font-size: 17px;
   margin: auto;
   padding: 40px;
   padding-top: 6em;
-  max-width: 70ch;
+  max-width: 80ch;
   text-align: left;
-  background-color: #dad7cd;
+  background-color: var(--light-brown);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: #2e4038;
+  color: var(--text-color);
 }
 
 .title {
   font-size: 60px;
   font-family: title;
-  color: #a3b18a;
-  -webkit-text-stroke: 2px #588157;
-  text-shadow: 2px 2px 0 #588157;
+  color: var(--light-green);
+  -webkit-text-stroke: 2px var(--dark-green);
+  text-shadow: 2px 2px 0 var(--dark-green);
 }
 
 main {
@@ -43,9 +52,9 @@ main {
   font-size: 2.3em;
   font-family: title;
   margin-bottom: 0px;
-  color: #a3b18a;
-  -webkit-text-stroke: 1px #588157;
-  text-shadow: 1px 1px 0 #588157;
+  color: var(--light-green);
+  -webkit-text-stroke: 1px var(--dark-green);
+  text-shadow: 1px 1px 0 var(--dark-green);
 }
 
 .date {
@@ -55,49 +64,59 @@ main {
 h1 {
   font-size: 60px;
   font-family: title;
-  color: #a3b18a;
-  -webkit-text-stroke: 2px #588157;
-  text-shadow: 2px 2px 0 #588157;
+  color: var(--light-green);
+  -webkit-text-stroke: 2px var(--dark-green);
+  text-shadow: 2px 2px 0 var(--dark-green);
   letter-spacing: 1px;
 }
+
 h2 {
   font-size: 42px;
   font-family: title;
-  color: #588157;
+  color: var(--dark-green);
 }
+
 h3 {
   font-size: 18px;
-  color: #588157;
+  color: var(--dark-green);
 }
+
 h4 {
   font-size: 14px;
-  color: #588157;
+  color: var(--dark-green);
 }
 h5,
 h6,
 strong,
 b {
-  color: #a3b18a;
+  color: var(--light-green);
 }
+
 a {
-  color: #588157;
+  text-decoration: none;
+  color: var(--dark-green);
   text-underline-offset: 3px;
   cursor: url('/assets/cursors/select.cur'), auto;
 }
+
 nav a {
   margin-right: 30px;
   line-height: 0px;
   font-size: 28px;
   letter-spacing: 0.5px;
   font-family: title;
-  /* color: #A3B18A;
-	-webkit-text-stroke: 0.8px #588157; 
-	text-shadow: 0.5px 0.5px 0 #588157; */
-  color: #594d40;
+  color: var(--nav-color);
+  text-decoration: none;
 }
+
 a.active {
-  font-weight: bolder;
+  
 }
+
+a:visited{
+  color: var(--text-color);
+}
+
 .hover-underline-animation {
   position: relative;
 }
@@ -106,10 +125,10 @@ a.active {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 3px;
-  bottom: 0px;
+  height: 5px;
+  bottom: -5px;
   left: 0;
-  background-color: #594D40;
+  background-color: #588157;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -117,19 +136,24 @@ a.active {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 textarea {
   width: 100%;
   font-size: 16px;
 }
+
 input {
   font-size: 16px;
 }
+
 content {
   line-height: 1.6;
 }
+
 table {
   width: 100%;
 }
+
 img {
   max-width: 100%;
   height: auto;

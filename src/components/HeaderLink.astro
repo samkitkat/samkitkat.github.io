@@ -20,6 +20,9 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
   a.active {
     display: none;
   }
+  a:visited {
+    color: var(--nav-color);
+  }
   .hover-underline-animation {
     position: relative;
   }

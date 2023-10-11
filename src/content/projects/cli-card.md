@@ -3,7 +3,7 @@ title: "My Personal CLI Card"
 description: "npx samkitkat"
 pubDate: "July 12 2022"
 heroImage: "/placeholder-hero.jpg"
-tags: ["cli", "node", "javascript"]
+tags: ["cli", "npm", "js"]
 projectURL: "https://www.npmjs.com/package/samkitkat"
 ---
 

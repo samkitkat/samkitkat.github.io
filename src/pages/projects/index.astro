@@ -14,58 +14,59 @@ const posts = (await getCollection("projects")).sort(
   <head>
     <BaseHead title="projects" description="hello" />
     <style>
-	  .title {
-		text-align: center;
-        font-size: 26px;
-        letter-spacing: 0.5px;
-        -webkit-text-stroke: 1.2px #588157;
-        text-shadow: 0.5px 0.5px 0 #588157;
-      }
-	  ul li {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      a {
-        text-decoration: none;
-		display: block;
-		padding: 10px;
-      }
-      .project-card {
-        margin-bottom: 1em;
-        border-radius: 5px;
-        border-style: solid;
-        border-color: #594d40;
-        box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
-        transition: 0.3s ease-in-out 0s;
-      }
-      .project-link {
-        display: none;
-        font-size: 20px;
-      }
-      .project-card:hover {
-        cursor: url("/assets/cursors/select.cur"),
-          auto;
-        transition: 0.3s ease-in-out 0s;
-        transform: scale(0.98);
-      }
       .boxes {
         box-sizing: border-box;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         flex-wrap: wrap;
         column-gap: 5%;
-        max-width: 1000px;
+
         list-style: none;
         margin: 1em auto;
         padding: 0px;
       }
-      p {
+      ul li {
+        align-items: center;
+        justify-content: center;
+      }
+      .project-box {
+        padding: 1em 1em 1em 1em;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: #594d40;
+        box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+        transition: 0.3s ease-in-out 0s;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .project-box:hover {
+        cursor: url("/assets/cursors/select.cur"), auto;
+        transition: 0.3s ease-in-out 0s;
+        transform: scale(0.98);
+      }
+      a {
+        text-decoration: none;
+        display: block;
+      }
+      .title {
+        text-align: center;
+        font-size: 26px;
+        letter-spacing: 0.5px;
+        -webkit-text-stroke: 1.2px #588157;
+        text-shadow: 0.5px 0.5px 0 #588157;
+      }
+      .tags {
         font-family: body;
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: 15px;
         display: flex;
         justify-content: center;
+
+        align-items: center;
+        text-align: center;
+        margin-top: auto;
       }
     </style>
   </head>
@@ -77,10 +78,13 @@ const posts = (await getCollection("projects")).sort(
         <ul class="boxes">
           {
             posts.reverse().map((post) => (
-              <li class="project-card">
+              <li class="project-box">
                 <a href={`${post.data.projectURL}`}>
-                    <h1 class="title">{post.data.title}</h1>
+                  <h1 class="title">{post.data.title}</h1>
                 </a>
+                <p class="tags">
+                  {post.data.tags.join(' ')}
+               </p>
               </li>
             ))
           }

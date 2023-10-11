@@ -3,7 +3,7 @@ title: "D20 Roller"
 description: "try to get a 20"
 pubDate: "June 02 2023"
 heroImage: "/placeholder-hero.jpg"
-tags: ["html", "css", "javascript"]
+tags: ["html", "css", "js"]
 projectURL: "https://www.samkitkat.com/d20/"
 ---
 

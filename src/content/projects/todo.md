@@ -3,7 +3,7 @@ title: "Todo App"
 description: "Courier"
 pubDate: "June 5 2023"
 heroImage: "/placeholder-hero.jpg"
-tags: ["react", "nextjs", "courier", "segment"]
+tags: ["reactjs", "nextjs", "courierAPI", "segmentAPI"]
 projectURL: "https://todo-app-samkitkat.vercel.app/"
 ---
 <span style="color:#588157; font-weight: bold; font-size: 20px; -webkit-text-stroke: 2px #588157; letter-spacing: 1px;">
