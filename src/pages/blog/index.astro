@@ -4,11 +4,11 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { getCollection } from "astro:content";
 
-
 const posts = (await getCollection("blog")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,8 +29,7 @@ const posts = (await getCollection("blog")).sort(
         transition: 0.3s ease-in-out 0s;
       }
       .box:hover {
-        cursor: url("/assets/cursors/select.cur"),
-          auto;
+        cursor: url("/assets/cursors/select.cur"), auto;
         transition: 0.3s ease-in-out 0s;
         transform: scale(0.98);
       }
@@ -46,15 +45,20 @@ const posts = (await getCollection("blog")).sort(
         border-style: solid;
         border-color: #594d40;
       }
+      .inline-title {
+        display: inline;
+        line-height: 1.6em;
+      }
     </style>
   </head>
   <body>
+
     <Header />
-    
+
     <main>
       <h1 class="title">Blog</h1>
       <section>
-        <ul class="boxes">
+        <ul>
           {
             posts.reverse().map((post) => (
               <li class="box">
@@ -66,8 +70,9 @@ const posts = (await getCollection("blog")).sort(
                       day: "numeric",
                     })}
                   </time>
-                  {post.data.title}</a>
-                  <p class="description">{post.data.description}</p>
+                  <p class="inline-title">{post.data.title}</p>
+                </a>
+                <p class="description">{post.data.description}</p>
               </li>
             ))
           }
@@ -76,6 +81,5 @@ const posts = (await getCollection("blog")).sort(
     </main>
 
     <Footer />
-
   </body>
 </html>
