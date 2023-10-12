@@ -1,6 +1,6 @@
 ---
 title: "My Personal CLI Card"
-description: "npx samkitkat"
+description: "My first ever npm package, try running npx samkitkat to check it out"
 pubDate: "July 12 2022"
 heroImage: "/placeholder-hero.jpg"
 tags: ["cli", "npm", "js"]

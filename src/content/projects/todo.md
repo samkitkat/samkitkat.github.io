@@ -1,6 +1,6 @@
 ---
 title: "Todo App"
-description: "Courier"
+description: "My envisionment of a cleaner and more minimalistic todo app that allows me to effortlessly keep track of tasks."
 pubDate: "June 5 2023"
 heroImage: "/placeholder-hero.jpg"
 tags: ["reactjs", "nextjs", "courierAPI", "segmentAPI"]

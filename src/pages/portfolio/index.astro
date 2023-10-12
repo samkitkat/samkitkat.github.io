@@ -3,6 +3,10 @@ import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+const posts = await getCollection("projects");
+const project1 = posts[4];
+const project2 = posts[0];
 ---
 
 <!DOCTYPE html>
@@ -10,11 +14,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
-      h1 {
-        margin-bottom: 1px;
-      }
       Header {
         margin-bottom: 3em;
+      }
+      main {
+        padding-bottom: 13em;
+      }
+      h1 {
+        margin-bottom: 1px;
       }
       p {
         line-height: 1.39rem;
@@ -25,10 +32,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
       }
       a {
         position: relative;
-        color: #594D40;
-      }
-      main {
-        padding-bottom: 13em;
+        color: #594d40;
       }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -50,38 +54,74 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
       <h1 class="title">Hello, I'm Samar!</h1>
 
       <br />
-      
+
       <p>Hey there!👋 I'm a fullstack engineer and developer advocate</p>
-        
+
       <p>
-        I am a dedicated team player with a keen eye for detail and exceptional 
-        organizational skills. My strong interpersonal communication and problem-solving 
-        abilities make me a standout candidate for any project. With a robust technical 
-        skill set that includes ReactJS, Javascript, & Node. I am well-equipped to tackle 
-        full-stack development challenges. Additionally, my experience with UNIX/LINUX and 
-        API integrations further enhance my capabilities. Whether it's developing innovative 
-        web applications or advocating for cutting-edge technologies, I am committed to 
-        contributing my skills and expertise to make a meaningful impact.
+        I am a dedicated team player with a keen eye for detail and exceptional
+        organizational skills. My strong interpersonal communication and
+        problem-solving abilities make me a standout candidate for any project.
+        With a robust technical skill set that includes ReactJS, Javascript, &
+        Node. I am well-equipped to tackle full-stack development challenges.
+        Additionally, my experience with UNIX/LINUX and API integrations further
+        enhance my capabilities. Whether it's developing innovative web
+        applications or advocating for cutting-edge technologies, I am committed
+        to contributing my skills and expertise to make a meaningful impact.
       </p>
 
       <p>
-        Lately, I've been wearing many hats from crafting freelance websites and nurturing 
-        my new role as a cat mom. In my spare time, I've been passionately 
-        collaborating on exciting online projects within my vibrant community. It's a dynamic 
-        blend of creativity, responsibilities, and shared experiences that keeps me engaged 
-        and motivated.
+        Lately, I've been wearing many hats from crafting freelance websites and
+        nurturing my new role as a cat mom. In my spare time, I've been
+        passionately collaborating on exciting online projects within my vibrant
+        community. It's a dynamic blend of creativity, responsibilities, and
+        shared experiences that keeps me engaged and motivated.
       </p>
-        
+
+      <h1>Projects</h1>
       <p>
-        <br />Check out my super fun 
-        <a class="hover-underline-animation" href="/projects">projects</a>
-        <br />Check out my cool 
-        <a class="hover-underline-animation" href="/" target="_blank" rel="noopener noreferrer">link page</a>
+        here are 2 of my more impressive projects, you can view the rest of my
+        projects (which are still pretty impressive imo) by heading to the
+        "Projects" page
       </p>
+      <section>
+        <ul class="boxes">
+          <li class="project-box">
+            <a class="a-project" href={`${project1.data.projectURL}`}>
+              <h2 class="title-projects">{project1.data.title}</h2>
+              <p class="project-description">{project1.data.description}</p>
+              <div class="tags-boxes">
+                {
+                  project1.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
+            </a>
+          </li>
 
-      <p class="hehe">hire me plz</p>
-
+          <li class="project-box">
+            <a class="a-project" href={`${project2.data.projectURL}`}>
+              <h2 class="title-projects">{project2.data.title}</h2>
+              <p class="project-description">{project2.data.description}</p>
+              <div class="tags-boxes">
+                {
+                  project2.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
+
+    <p class="hehe">hire me plz</p>
+
     <Footer />
   </body>
 </html>

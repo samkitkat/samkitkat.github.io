@@ -13,62 +13,7 @@ const posts = (await getCollection("projects")).sort(
 <html lang="en">
   <head>
     <BaseHead title="projects" description="hello" />
-    <style>
-      .boxes {
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-        flex-wrap: wrap;
-        column-gap: 5%;
-
-        list-style: none;
-        margin: 1em auto;
-        padding: 0px;
-      }
-      ul li {
-        align-items: center;
-        justify-content: center;
-      }
-      .project-box {
-        padding: 1em 1em 1em 1em;
-        margin-bottom: 1em;
-        border-radius: 5px;
-        border-style: solid;
-        border-color: #594d40;
-        box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
-        transition: 0.3s ease-in-out 0s;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .project-box:hover {
-        cursor: url("/assets/cursors/select.cur"), auto;
-        transition: 0.3s ease-in-out 0s;
-        transform: scale(0.98);
-      }
-      a {
-        text-decoration: none;
-        display: block;
-      }
-      .title {
-        text-align: center;
-        font-size: 26px;
-        letter-spacing: 0.5px;
-        -webkit-text-stroke: 1.2px #588157;
-        text-shadow: 0.5px 0.5px 0 #588157;
-      }
-      .tags {
-        font-family: body;
-        font-size: 15px;
-        display: flex;
-        justify-content: center;
-
-        align-items: center;
-        text-align: center;
-        margin-top: auto;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <Header />
@@ -80,11 +25,15 @@ const posts = (await getCollection("projects")).sort(
             posts.reverse().map((post) => (
               <li class="project-box">
                 <a href={`${post.data.projectURL}`}>
-                  <h1 class="title">{post.data.title}</h1>
+                  <h1 class="title-projects">{post.data.title}</h1>
                 </a>
-                <p class="tags">
-                  {post.data.tags.join(' ')}
-               </p>
+                <div class="tags-boxes">
+                  {post.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))}
+                </div>
               </li>
             ))
           }
