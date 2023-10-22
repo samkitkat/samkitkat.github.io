@@ -20,26 +20,4 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
   a.active {
     display: none;
   }
-  a:visited {
-    color: var(--nav-color);
-  }
-  .hover-underline-animation {
-    position: relative;
-  }
-  .hover-underline-animation::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 5px;
-    bottom: -18px;
-    left: 0;
-    background-color: #588157;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  .hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
 </style>

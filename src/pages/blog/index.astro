@@ -24,7 +24,7 @@ const posts = (await getCollection("blog")).sort(
         margin-bottom: 1em;
         border-radius: 5px;
         border-style: solid;
-        border-color: #594d40;
+        border-color: var(--primary-color);
         box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
         transition: 0.3s ease-in-out 0s;
       }
@@ -35,7 +35,7 @@ const posts = (await getCollection("blog")).sort(
       }
       ul li time {
         flex: 0 0 130px;
-        color: #594d40;
+        color: var(--text-color);
         font-size: 14px;
 
         margin-right: 1em;
@@ -43,7 +43,7 @@ const posts = (await getCollection("blog")).sort(
         border-width: 1.5px;
         border-radius: 5px;
         border-style: solid;
-        border-color: #594d40;
+        border-color: var(--primary-color);
       }
       .inline-title {
         display: inline;
@@ -70,7 +70,7 @@ const posts = (await getCollection("blog")).sort(
                       day: "numeric",
                     })}
                   </time>
-                  <p class="inline-title">{post.data.title}</p>
+                  <h3 class="inline-title">{post.data.title}</h3>
                 </a>
                 <p class="description">{post.data.description}</p>
               </li>

@@ -6,7 +6,6 @@ import Socials from "./Socials.astro";
   <footer>
     <h1>♡ {today.getFullYear()} سمر ♡</h1>
     <Socials />
-    <!-- <hr> -->
   </footer>
 
 <style>
@@ -18,16 +17,9 @@ import Socials from "./Socials.astro";
   }
   h1 {
     font-family: title;
-    line-height: 5px;
     font-size: 1.3em;
-    color: #588157;
+    background-color: var(--primary-color);
     -webkit-text-stroke: 0px;
     text-shadow: none;
-  }
-  hr {
-    border-radius: 5px;
-    border: 5px solid #594D40;
-    width: -webkit-fill-available;
-    padding: 0rem;
   }
 </style>

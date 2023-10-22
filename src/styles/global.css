@@ -2,25 +2,24 @@
   font-family: title;
   src: url("./Fonts/Arbotek/Arbotek-Ultra.otf");
 }
-
 @font-face {
   font-family: body;
   src: url("./Fonts/ComicMono.ttf");
 }
-
 ::selection {
-  background: #a3b18a;
+  background: #a9c4e2;
 }
-
 :root {
-  --light-brown: #dad7cd;
-  --light-green: #a3b18a;
+  --background: #ffffff;
+  --light-green: rgb(163, 177, 138);
   --dark-green: #588157;
-  --text-color: #2e4038;
-  --border-brown: #594d40;
-  --nav-color: #594d40;
-}
 
+  --p-color: #070a3b;
+  --text-color: #3C44D7;
+  --nav-color: #3C44D7;
+  --primary-color: #3C44D7;
+  --secondary-color: #a9c4e2;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
   cursor: url('/assets/cursors/main.cur'), auto;
@@ -30,75 +29,70 @@ body {
   padding-top: 6em;
   max-width: 80ch;
   text-align: left;
-  background-color: var(--light-brown);
+  background-color: var(--background);
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: var(--text-color);
 }
-
 .title {
   font-size: 60px;
   font-family: title;
-  color: var(--light-green);
-  -webkit-text-stroke: 2px var(--dark-green);
-  text-shadow: 2px 2px 0 var(--dark-green);
+  letter-spacing: 1px;
 }
-
 main {
   padding: 0em 0em 2em 0em;
 }
-
-.contentTitle {
+h1.contentTitle {
   font-size: 2.3em;
-  font-family: title;
   margin-bottom: 0px;
-  color: var(--light-green);
-  -webkit-text-stroke: 1px var(--dark-green);
-  text-shadow: 1px 1px 0 var(--dark-green);
+  letter-spacing: 1.2px;
 }
-
 .date {
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -20px;
+  color: var(--primary-color)
 }
-
 h1 {
-  font-size: 60px;
   font-family: title;
-  color: var(--light-green);
-  -webkit-text-stroke: 2px var(--dark-green);
-  text-shadow: 2px 2px 0 var(--dark-green);
-  letter-spacing: 1px;
+  background: var(--secondary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--primary-color);
+  /* text-shadow: 2px 3px 0 var(--secondary-color); */
+  text-shadow:
+     0px 0px 0 var(--secondary-color),  
+     1.2px -1.2px 0 var(--primary-color),
+    -1px  -1.2px 0 var(--primary-color),
+     1px  1px 0 var(--primary-color);
 }
-
 h2 {
   font-size: 42px;
   font-family: title;
-  color: var(--dark-green);
 }
-
 h3 {
-  font-size: 18px;
-  color: var(--dark-green);
+  font-size: 16px;
+  color: var(--primary-color);
 }
-
 h4 {
   font-size: 14px;
-  color: var(--dark-green);
+  color: var(--primary-color);
 }
 h5,
 h6,
+p {
+  color: var(--p-color);
+}
 strong,
 b {
   color: var(--light-green);
 }
-
 a {
   text-decoration: none;
-  color: var(--dark-green);
+  color: var(--primary-color);
   text-underline-offset: 3px;
   cursor: url('/assets/cursors/select.cur'), auto;
 }
-
 nav a {
   margin-right: 30px;
   line-height: 0px;
@@ -108,15 +102,12 @@ nav a {
   color: var(--nav-color);
   text-decoration: none;
 }
-
 a.active {
   
 }
-
 a:visited{
-  color: var(--text-color);
+  color: var(--primary-color);
 }
-
 .hover-underline-animation {
   position: relative;
 }
@@ -126,9 +117,9 @@ a:visited{
   width: 100%;
   transform: scaleX(0);
   height: 5px;
-  bottom: -5px;
+  bottom: -18px;
   left: 0;
-  background-color: #588157;
+  background-color: var(--primary-color);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -185,7 +176,7 @@ blockquote {
   padding-bottom: 3rem;
 }
 .icon1 {
-  background-color: rgba(88, 129, 87, 0.667);
+  background-color: var(--primary-color);;
   width: 20px;
   height: 20px;
   border-radius: 1em;
@@ -231,7 +222,7 @@ ul li {
   margin-bottom: 1em;
   border-radius: 5px;
   border-style: solid;
-  border-color: #594d40;
+  border-color: var(--primary-color);
   box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
   transition: 0.3s ease-in-out 0s;
 
@@ -250,12 +241,8 @@ ul li {
   align-items: center;
   text-align: center;
   margin: 0;
-
   font-size: 26px;
-  letter-spacing: 0.5px;
-  color: var(--light-green);
-  -webkit-text-stroke: 1.2px var(--dark-green);
-  text-shadow: 0.5px 0.5px 0 var(--dark-green);
+  letter-spacing: 1.8px;
 }
 .tags-boxes {
   padding: 0px;
@@ -266,22 +253,25 @@ ul li {
 }
 .tag-box {
   display: inline-block;
-  padding: 0.2em 0.4em 0.2em 0.4em;
+  padding: 0.3em 0.4em 0.2em 0.4em;
   margin: 0.2em 0.2em 0em 0em;
   border-radius: 5px;
   border-style: solid;
-  border-color: var(--light-green);
+  border-color: var(--primary-color);
 }
 .tags {
   font-family: body;
   font-size: 12px;
+  font-weight: bold;
+  color: var(--primary-color);
   display: flex;
   margin: 0;
 }
 .project-description {
-  font-family: body;
-  font-size: 12px;
+
+  font-size: 15px;
   text-align: center;
+  line-height: 1.2rem;
 }
 /* ///////////////////////////////////////
 /////////// PROJECTS CSS ////////////////

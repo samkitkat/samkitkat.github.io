@@ -25,8 +25,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				
-				<h1 class="contentTitle">{title}</h1>
-				{pubDate && <p class="date">{pubDate.toLocaleDateString('en-US')}</p>}
+				<h2 class="contentTitle">{title}</h2>
+				{pubDate && <p class="date"><a href="/blog">↩</a> {pubDate.toLocaleDateString('en-US')}</p>}
 				{
 					updatedDate && (
 						<div>
