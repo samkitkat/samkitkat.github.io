@@ -26,13 +26,13 @@ body {
   font-size: 17px;
   margin: auto;
   padding: 40px;
-  padding-top: 6em;
+  padding-top: 4em;
   max-width: 80ch;
   text-align: left;
   background-color: var(--background);
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 .title {
   font-size: 60px;
@@ -69,6 +69,7 @@ h1 {
 h2 {
   font-size: 42px;
   font-family: title;
+  color: var(--primary-color);
 }
 h3 {
   font-size: 16px;
@@ -198,6 +199,16 @@ blockquote {
   text-decoration: none;
   font-size: 1.1em;
 }
+.boxes-home {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  flex-wrap: wrap;
+  column-gap: 1%;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
 
 /* ///////////////////////////////////////
 /////////// PROJECTS CSS ////////////////
@@ -268,8 +279,7 @@ ul li {
   margin: 0;
 }
 .project-description {
-
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   line-height: 1.2rem;
 }

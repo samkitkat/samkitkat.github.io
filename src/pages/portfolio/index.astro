@@ -5,8 +5,10 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 const posts = await getCollection("projects");
+const blog = await getCollection("blog");
 const project1 = posts[4];
 const project2 = posts[0];
+const project3 = blog[0];
 ---
 
 <!DOCTYPE html>
@@ -29,6 +31,21 @@ const project2 = posts[0];
       a {
         position: relative;
         color: #594d40;
+      }
+      .project-box {
+        padding: 1em 1em 1em 1em;
+      }
+      .title-projects {
+        font-size: 20px;
+      }
+      .project-description {
+        font-size: 12px;
+      }
+      .tag-box {
+        padding: 0em 0.4em 0em 0.4em;
+      }
+      .tags {
+        font-size: 8px;
       }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -69,12 +86,12 @@ const project2 = posts[0];
         helping my friend plan her wedding, drinking boba, and exercising.
       </p>
 
-      <h1 class="title">Projects</h1>
-      <p>
-        A showcase of two of my favorite projects &#9660;
-      </p>
+      <h1 class="title">Featured Work</h1>
+      <br />
+      <br />
+
       <section>
-        <ul class="boxes">
+        <ul class="boxes-home">
           <li class="project-box">
             <a class="a-project" href={`${project1.data.projectURL}`} target="_blank" rel="noopener noreferrer">
               <h2 class="title-projects">{project1.data.title}</h2>
@@ -106,6 +123,23 @@ const project2 = posts[0];
               </div>
             </a>
           </li>
+
+          <li class="project-box">
+            <a class="a-project" href={`${project3.data.projectURL}`}>
+              <h2 class="title-projects">{project3.data.title}</h2>
+              <p class="project-description">{project3.data.description}</p>
+              <div class="tags-boxes">
+                {
+                  project3.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
+            </a>
+          </li>
+
         </ul>
       </section>
     </main>
