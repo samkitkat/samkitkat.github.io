@@ -1,0 +1,85 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("caseStudy")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title="caseStudy" description="hello" />
+    <style>
+      ul {
+        list-style-type: none;
+        padding: unset;
+        line-height: 20px;
+      }
+      .box {
+        padding: 1.5em 1em 1em 1em;
+        margin-bottom: 1em;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: var(--primary-color);
+        box-shadow: rgb(28 32 93 / 24%) 0px 2px 8px 0px;
+        transition: 0.3s ease-in-out 0s;
+      }
+      .box:hover {
+        cursor: url("/assets/cursors/select.cur"), auto;
+        transition: 0.3s ease-in-out 0s;
+        transform: scale(0.98);
+      }
+      ul li time {
+        flex: 0 0 130px;
+        color: var(--text-color);
+        font-size: 14px;
+
+        margin-right: 1em;
+        padding: 0.4rem;
+        border-width: 1.5px;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: var(--primary-color);
+      }
+      .inline-title {
+        display: inline;
+        line-height: 1.6em;
+      }
+    </style>
+  </head>
+  <body>
+
+    <Header />
+
+    <main>
+      <h1 class="title">Case Study</h1>
+      <section>
+        <ul>
+          {
+            posts.reverse().map((post) => (
+              <li class="box">
+                <a href={`/caseStudy/${post.slug}/`}>
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {post.data.pubDate.toLocaleDateString("en-us", {
+                      year: "2-digit",
+                      month: "short",
+                      day: "numeric",
+                    })}
+                  </time>
+                  <h3 class="inline-title">{post.data.title}</h3>
+                </a>
+                <p class="description">{post.data.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
