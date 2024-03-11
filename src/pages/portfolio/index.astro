@@ -32,21 +32,6 @@ const project3 = blog[0];
         position: relative;
         color: #594d40;
       }
-      .project-box {
-        padding: 1em 1em 1em 1em;
-      }
-      .title-projects {
-        font-size: 20px;
-      }
-      .project-description {
-        font-size: 12px;
-      }
-      .tag-box {
-        padding: 0em 0.4em 0em 0.4em;
-      }
-      .tags {
-        font-size: 8px;
-      }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"
@@ -68,34 +53,41 @@ const project3 = blog[0];
 
       <br />
 
-      <p>Hey there!👋 I'm a fullstack engineer and developer advocate</p>
-
       <p>
-        I am a dedicated team player with a keen eye for detail and exceptional
-        organizational skills. My strong interpersonal communication and
-        problem-solving abilities make me a standout candidate for any project.
-        I have a robust technical skill set that includes ReactJS, Javascript, &
-        Node making me well-equipped to tackle full-stack development challenges.
-        Whether it's developing innovative web applications or advocating for 
-        cutting-edge technologies, I am committed to contributing my skills and 
-        expertise to make a meaningful impact.
+        Welcome to my portfolio! I am a versatile full-stack developer with a passion for crafting engaging digital experiences. I specialize in React.js, Astro, and Next.js. My journey into the world of web development began with a fascination for creating aesthetically pleasing and functional interfaces.
       </p>
 
       <p>
-        Some stuff I've been up to lately: freelancing, spending time with my new kitten, 
-        helping my friend plan her wedding, drinking boba, and exercising.
+        In addition to my development skills, I bring a keen eye for design and accessibility to the table. I'm well-versed in UI/UX design principles and content design, utilizing tools like Figma to bring ideas to life while ensuring inclusivity and usability for all users.
       </p>
 
-      <h1 class="title">Featured Work</h1>
-      <br />
-      <br />
+      <p>
+        Beyond technical expertise, I thrive in leadership roles, adept at leading projects and fostering collaborative environments. Whether it's guiding a team through a complex development task or hosting events to share knowledge and inspire others, I take pride in facilitating growth and success.
+      </p>
+
+      <p>
+        Currently, I'm on the lookout for opportunities where I can leverage my diverse skill set to create impactful digital solutions. If you're seeking a passionate developer with a blend of technical prowess, design sensibility, and leadership acumen, I'd love to connect and explore how we can work together to bring your vision to life.
+      </p>
+
+      <p>
+        Let's build something remarkable together!
+      </p>
+
+      <h2>Featured Work</h2>
 
       <section>
         <ul class="boxes-home">
           <li class="project-box">
-            <a class="a-project" href={`${project1.data.projectURL}`} target="_blank" rel="noopener noreferrer">
-              <h2 class="title-projects">{project1.data.title}</h2>
-              <p class="project-description">{project1.data.description}</p>
+            <a
+              class="a-project"
+              href={`${project1.data.projectURL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="title-projects"><h3>{project1.data.title}</h3></div>
+              <div>
+                <p class="project-description">{project1.data.description}</p>
+              </div>
               <div class="tags-boxes">
                 {
                   project1.data.tags.map((tag) => (
@@ -109,9 +101,16 @@ const project3 = blog[0];
           </li>
 
           <li class="project-box">
-            <a class="a-project" href={`${project2.data.projectURL}`}>
-              <h2 class="title-projects">{project2.data.title}</h2>
-              <p class="project-description">{project2.data.description}</p>
+            <a
+              class="a-project"
+              href={`${project2.data.projectURL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="title-projects"><h3>{project2.data.title}</h3></div>
+              <div>
+                <p class="project-description">{project2.data.description}</p>
+              </div>
               <div class="tags-boxes">
                 {
                   project2.data.tags.map((tag) => (
@@ -125,9 +124,16 @@ const project3 = blog[0];
           </li>
 
           <li class="project-box">
-            <a class="a-project" href={`${project3.data.projectURL}`}>
-              <h2 class="title-projects">{project3.data.title}</h2>
-              <p class="project-description">{project3.data.description}</p>
+            <a
+              class="a-project"
+              href="https://www.courier.com/blog/intro-to-your-courier-cheerleading-catalyst/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="title-projects"><h3>{project3.data.title}</h3></div>
+              <div>
+                <p class="project-description">{project3.data.description}</p>
+              </div>
               <div class="tags-boxes">
                 {
                   project3.data.tags.map((tag) => (
@@ -139,7 +145,6 @@ const project3 = blog[0];
               </div>
             </a>
           </li>
-
         </ul>
       </section>
     </main>

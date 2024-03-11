@@ -22,11 +22,16 @@ import HeaderLink from "./HeaderLink.astro";
     border-color: var(--nav-color);
     background-color: var(--nav-color);
   }
-  header {
+  .header {
     display: flex;
-    margin: -0.4em 0em 2em 0em;
+    position: relative;
+    margin: 0em 0em 2em 0em;
     padding: 0.4rem;
     justify-content: right;
+
+    font-weight: bold;
+    line-height: 0px;
+    font-size: 18px;
   }
   @media only screen and (max-width: 680px) {
     header {

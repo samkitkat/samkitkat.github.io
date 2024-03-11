@@ -1,28 +1,24 @@
-@font-face {
+/* @font-face {
   font-family: title;
   src: url("./Fonts/Arbotek/Arbotek-Ultra.otf");
-}
-@font-face {
-  font-family: body;
-  src: url("./Fonts/ComicMono.ttf");
-}
+} */
 ::selection {
-  background: #a9c4e2;
+  background: var(--light-green);
 }
 :root {
-  --background: #F2F3F4;
-  --light-green: rgb(163, 177, 138);
+  --background: #f2f3f4;
+  --light-green: rgb(191, 205, 166);
   --dark-green: #588157;
-
-  --p-color: #070a3b;
-  --text-color: #3C44D7;
-  --nav-color: #3C44D7;
-  --primary-color: #3C44D7;
+  --p-color: #323232;
+  --text-color: #588157;
+  --nav-color: #588157;
+  --primary-color: #588157;
   --secondary-color: #a9c4e2;
+  --title: sans-serif;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  cursor: url('/assets/cursors/main.cur'), auto;
+  font-family: sans-serif;
+  cursor: url("/assets/cursors/main.cur"), auto;
   font-size: 17px;
   margin: auto;
   padding: 40px;
@@ -34,16 +30,11 @@ body {
   overflow-wrap: break-word;
   color: var(--primary-color);
 }
-.title {
-  font-size: 60px;
-  font-family: title;
-  letter-spacing: 1px;
-}
 main {
   padding: 0em 0em 2em 0em;
 }
 h1.contentTitle {
-  font-size: 2.3em;
+  font-size: 2em;
   margin-bottom: 0px;
   letter-spacing: 1.2px;
 }
@@ -51,28 +42,21 @@ h1.contentTitle {
   font-size: 18px;
   font-weight: bold;
   margin-top: -20px;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
+
 h1 {
-  font-family: title;
-  background: var(--secondary-color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px var(--primary-color);
-  /* text-shadow: 2px 3px 0 var(--secondary-color); */
-  text-shadow:
-     0px 0px 0 var(--secondary-color),  
-     1.2px -1.2px 0 var(--primary-color),
-    -1px  -1.2px 0 var(--primary-color),
-     1px  1px 0 var(--primary-color);
-}
-h2 {
   font-size: 42px;
   font-family: title;
+  letter-spacing: 1px;
+}
+h2 {
+  font-family: title;
+  font-size: 38px;
   color: var(--primary-color);
 }
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--primary-color);
 }
 h4 {
@@ -92,34 +76,26 @@ a {
   text-decoration: none;
   color: var(--primary-color);
   text-underline-offset: 3px;
-  cursor: url('/assets/cursors/select.cur'), auto;
+  cursor: url("/assets/cursors/select.cur"), auto;
 }
-nav a {
-  margin-right: 30px;
-  line-height: 0px;
-  font-size: 28px;
-  letter-spacing: 0.5px;
-  font-family: title;
-  color: var(--nav-color);
-  text-decoration: none;
-}
+
 a.active {
-  
 }
-a:visited{
+a:visited {
   color: var(--primary-color);
 }
 .hover-underline-animation {
   position: relative;
+  padding-left: 15px;
 }
 .hover-underline-animation::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 90%;
   transform: scaleX(0);
   height: 5px;
   bottom: -18px;
-  left: 0;
+  left: 10px;
   background-color: var(--primary-color);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
@@ -177,7 +153,7 @@ blockquote {
   padding-bottom: 3rem;
 }
 .icon1 {
-  background-color: var(--primary-color);;
+  background-color: var(--primary-color);
   width: 20px;
   height: 20px;
   border-radius: 1em;
@@ -194,7 +170,7 @@ blockquote {
 }
 
 .socials > a {
-  cursor: url('/assets/cursors/select.cur'), auto;
+  cursor: url("/assets/cursors/select.cur"), auto;
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 1.1em;
@@ -213,7 +189,7 @@ blockquote {
 /* ///////////////////////////////////////
 /////////// PROJECTS CSS ////////////////
 //////////////////////////////////////// */
- .boxes {
+.boxes {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -224,12 +200,8 @@ blockquote {
   margin: 0px;
   padding: 0px;
 }
-ul li {
-  align-items: center;
-  justify-content: center;
-}
 .project-box {
-  padding: 2em 1em 2em 1em;
+  padding: 1em 1em 1em 1em;
   margin-bottom: 1em;
   border-radius: 5px;
   border-style: solid;
@@ -239,7 +211,6 @@ ul li {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .project-box:hover {
   cursor: url("/assets/cursors/select.cur"), auto;
@@ -247,32 +218,23 @@ ul li {
   transform: scale(0.98);
 }
 .title-projects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  font-size: 26px;
-  letter-spacing: 1.8px;
+  text-align: left;
+  justify-content: left;
 }
 .tags-boxes {
   padding: 0px;
-  padding-top: 15px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end;
 }
 .tag-box {
   display: inline-block;
-  padding: 0.3em 0.4em 0.2em 0.4em;
+  padding: 0em 0.4em 0em 0.4em;
   margin: 0.2em 0.2em 0em 0em;
   border-radius: 5px;
   border-style: solid;
   border-color: var(--primary-color);
 }
 .tags {
-  font-family: body;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   color: var(--primary-color);
   display: flex;
@@ -280,7 +242,7 @@ ul li {
 }
 .project-description {
   font-size: 14px;
-  text-align: center;
+  text-align: left;
   line-height: 1.2rem;
 }
 /* ///////////////////////////////////////
