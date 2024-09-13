@@ -4,7 +4,7 @@ description: "see all my socials in one place"
 pubDate: "March 16 2023"
 heroImage: "/placeholder-hero.jpg"
 tags: ["html", "css", "js"]
-projectURL: "https://www.samkitkat.com/"
+projectURL: "https://www.samkitkat.com/links"
 ---
 
 As an individual with multiple online profiles across various social media platforms, I always found it challenging to manage and share them effectively. I wanted to showcase my online presence in one place, and that's when I stumbled upon Linktree.

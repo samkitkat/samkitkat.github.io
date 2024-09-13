@@ -27,7 +27,7 @@ My findings:
 </ul>
 
 <br/>
-<div align="center"><img src="../../assets/images/moodboard-lawa.PNG"></div>
+<div align="center"><img src="../../assets/images/moodboard-lawa.PNG" width="100%"></div>
 <br/>
 
 # Step 2: Ideation Phase
@@ -52,7 +52,7 @@ Additional Enhancements:
 </ul>
 
 <br/>
-<div align="center"><img src="../../assets/images/lawa-outline.PNG"></div>
+<div align="center"><img src="../../assets/images/lawa-outline.PNG" width="100%"></div>
 <br/>
 
 # UI Phase
@@ -89,7 +89,7 @@ Reflecting on this project, I've gained very valuable insights and skills. Some 
 
 # View Before & After
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="850" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FsbPFp0mPWELYERRTUINbX0%2FLAWA%3Ftype%3Ddesign%26node-id%3D58-73%26t%3D7981BQ1WDLaVy1Ic-1%26scaling%3Dscale-down%26page-id%3D58%253A32%26starting-point-node-id%3D58%253A73%26mode%3Ddesign" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="850" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FsbPFp0mPWELYERRTUINbX0%2FLAWA%3Ftype%3Ddesign%26node-id%3D58-73%26t%3D7981BQ1WDLaVy1Ic-1%26scaling%3Dscale-down%26page-id%3D58%253A32%26starting-point-node-id%3D58%253A73%26mode%3Ddesign" allowfullscreen></iframe>
 
 <br>
 <br>

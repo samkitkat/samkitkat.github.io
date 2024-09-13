@@ -7,6 +7,8 @@ tags: ["react", "nextjs", "courier", "segment"]
 projectURL: "https://todo-app-samkitkat.vercel.app/"
 ---
 
+<div align="center"><img src="../../assets/images/courier-img-head.webp" width="100%"></div>
+
 # Intro to your "Courier Cheerleading Catalyst"
 
 
@@ -45,7 +47,7 @@ Create a Segment account and workspace then follow the below:
 
 Now that it is connected you will be able to see all events that Segment is tracking though the Courier app!
 
-<a href="https://www.courier.com/docs/external-integrations/segment/segment-integration/" target="_blank" rel="noopener noreferrer" style="font-weight: bold; text-decoration: underline;">Step by step instructions for configuring Segment</a>
+<a class="blogLinks" href="https://www.courier.com/docs/external-integrations/segment/segment-integration/" target="_blank" rel="noopener noreferrer" style="font-weight: bold; text-decoration: underline;">Step by step instructions for configuring Segment</a>
 
 <br>
 
@@ -66,7 +68,7 @@ For this step, I followed closely along to the <a href="https://segment.com/docs
 </ol>
 
 
-<div align="center"><img src="../../assets/images/todo-complete-segment.gif"></div>
+<div align="center"><img src="../../assets/images/todo-complete-segment.gif" width="100%"></div>
 
 Segment offers a wide range of events that you can keep track of. In my case, I wanted to use Segment's analytics tracking capabilities to monitor when I finish my todos. To make it happen, I created a special function that checks if all my todos are completed. 
 
@@ -89,7 +91,7 @@ return (
 
 This function helps me see if I've finished everything on my list or if there's still work left to do. It's a simple yet effective way to keep tabs on my progress and make sure I stay on top of my tasks.
 
-<div align="left"><img src="../../assets/images/courier-img-1.png"></div>
+<div align="left"><img src="../../assets/images/courier-img-1.png" width="100%"></div>
 
 <span style="color:#3C44D7; font-weight: bold; font-size: 16px;">Note:</span> Please be aware that if you have any ad-blocking extensions enabled, they might interfere with the events being tracked by Segment. As a result, the tracked events may not be sent through and won't be visible in the logs. Consequently, notifications based on these events will not be sent as well.
 
@@ -135,7 +137,7 @@ In the automations tab, you will set up the triggers for your notifications. Cho
 <h1 style="text-align: center;"> And just like that, voila! 🎉 </h1>
 <br>
 
-<div align="center"><img src="../../assets/images/todo-app.gif"></div>
+<div align="center"><img src="../../assets/images/todo-app.gif" width="100%"></div>
 
 The automation is now set up, and your carefully crafted notification will be sent to the intended recipient.
 

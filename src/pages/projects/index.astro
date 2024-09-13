@@ -15,26 +15,23 @@ const posts = (await getCollection("projects")).sort(
     <BaseHead title="projects" description="hello" />
     <style></style>
   </head>
+
   <body>
     <Header />
     <main>
-      <h1>Projects</h1>
-      <section>
+      <header><h1 class="name">= Projects =</h1></header>
+      <section class="showcase">
         <ul class="boxes">
           {
             posts.reverse().map((post) => (
-              <li class="project-box">
+              <li class="box">
                 <a
                   href={`${post.data.projectURL}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div class="title-projects">
-                    <h3>{post.data.title}</h3>
-                  </div>
-                  <div>
-                    <p class="project-description">{post.data.description}</p>
-                  </div>
+                  <h3 class="title boxTextColor">{post.data.title}</h3>
+                  <p class="p boxTextColor">{post.data.description}</p>
                   <div class="tags-boxes">
                     {post.data.tags.map((tag) => (
                       <div class="tag-box">

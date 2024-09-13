@@ -1,41 +1,67 @@
 ---
+// import "../../styles/linkPage.css";
+import { links } from "../../consts";
+const today = new Date();
+
 import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
 import { getCollection } from "astro:content";
 const posts = await getCollection("projects");
 const blog = await getCollection("blog");
-const project1 = posts[4];
-const project2 = posts[0];
-const project3 = blog[0];
+const project0 = posts[0];
+const project1 = posts[1];
+const project2 = posts[2];
+const project3 = posts[3];
+const project4 = posts[4];
+const project5 = posts[5];
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      Header {
-        margin-bottom: 3em;
-      }
-      main {
-        margin-bottom: 13px;
-      }
-      h1 {
-        margin-bottom: 1px;
-      }
-      p {
-        line-height: 1.39rem;
-      }
-      a {
-        position: relative;
-        color: #594d40;
-      }
-    </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"
+    <meta charset="utf-8" />
+    <title>♡ samkitkat links ♡</title>
+    <meta name="viewport" content="width = device-width, initial-scale=1" />
+    <link rel="icon" href="/assets/images/frog.png" />
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
     ></script>
+    <script
+      is:inline
+      src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"
+    ></script>
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", () => {
+        VANTA.BIRDS({
+          el: "body",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color1: 0x83b7d7,
+          color2: 0xedcdea,
+          colorMode: "variance",
+          birdSize: 2.0,
+          wingSpan: 12.0,
+          speedLimit: 3.0,
+          separation: 10.0,
+          alignment: 12.0,
+          cohesion: 41.0,
+          quantity: 2.0,
+          speedLimit: 10.0,
+          backgroundAlpha: 0.0,
+        });
+      });
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -45,73 +71,120 @@ const project3 = blog[0];
 
       gtag("config", "G-F4F7YBFSTK");
     </script>
+
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <Header />
     <main>
-      <h1 class="title">Hello, I'm Samar!</h1>
+      <header>
+        <!-- <h1>Hello World!</h1> -->
+        <img class="pic" src="/assets/images/selfie.jpg" />
 
-      <br />
+        <div class="nameBox">
+          <a href="/portfolio" target="_blank" rel="noopener noreferrer">
+            <h1 class="name" title="click to view my site 🐸">samkitkat</h1>
+          </a>
+        </div>
+        <div class="bio">
+          <p class="boxTextColor">🌿 Just a coder girl in a coder world 🌿</p>
+        </div>
+      </header>
 
-      <p>
-        Welcome to my portfolio! I am a versatile full-stack developer with a passion for crafting engaging digital experiences. I specialize in React.js, Astro, and Next.js. My journey into the world of web development began with a fascination for creating aesthetically pleasing and functional interfaces.
-      </p>
+      <div class="showcase">
+        <div class="showTitle">
+            <div class="bio">
+                <p class="showTitle boxTextColor">⭐&nbsp;&nbsp;  My Projects  &nbsp;&nbsp;⭐</p>
+            </div>
+        </div>
 
-      <p>
-        In addition to my development skills, I bring a keen eye for design and accessibility to the table. I'm well-versed in UI/UX design principles and content design, utilizing tools like Figma to bring ideas to life while ensuring inclusivity and usability for all users.
-      </p>
-
-      <p>
-        Beyond technical expertise, I thrive in leadership roles, adept at leading projects and fostering collaborative environments. Whether it's guiding a team through a complex development task or hosting events to share knowledge and inspire others, I take pride in facilitating growth and success.
-      </p>
-
-      <p>
-        Currently, I'm on the lookout for opportunities where I can leverage my diverse skill set to create impactful digital solutions. If you're seeking a passionate developer with a blend of technical prowess, design sensibility, and leadership acumen, I'd love to connect and explore how we can work together to bring your vision to life.
-      </p>
-
-      <p>
-        Let's build something remarkable together!
-      </p>
-
-      <h2>Featured Work</h2>
-
-      <section>
-        <ul class="boxes-home">
-          <li class="project-box">
-            <a
-              class="a-project"
-              href={`${project1.data.projectURL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="title-projects"><h3>{project1.data.title}</h3></div>
-              <div>
-                <p class="project-description">{project1.data.description}</p>
-              </div>
-              <div class="tags-boxes">
+      <ul class="boxes">
+        <li class="box" title="todo app">
+          <a href={`${project4.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+            <div class="info">
+              <img
+                class="icon"
+                src="/assets/icons/book.svg"
+                alt="discord"
+                width="20"
+              />
+              <h3 class="title boxTextColor">{project4.data.title}</h3>
+            </div>
+            <p class="p boxTextColor">{project4.data.description}</p>
+             <div class="tags-boxes">
                 {
-                  project1.data.tags.map((tag) => (
+                  project4.data.tags.map((tag) => (
                     <div class="tag-box">
                       <p class="tags">{tag}</p>
                     </div>
                   ))
                 }
               </div>
+          </a>
+        </li>
+        <li class="box" title="cli">
+            <a href={`${project0.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/heart.svg"
+                  alt="heart"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">{project0.data.title}</h3>
+              </div>
+              <p class="p boxTextColor">{project0.data.description}</p>
+              <div class="tags-boxes">
+                  {
+                    project0.data.tags.map((tag) => (
+                      <div class="tag-box">
+                        <p class="tags">{tag}</p>
+                      </div>
+                    ))
+                  }
+                </div>
             </a>
           </li>
-
-          <li class="project-box">
-            <a
-              class="a-project"
-              href={`${project2.data.projectURL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="title-projects"><h3>{project2.data.title}</h3></div>
-              <div>
-                <p class="project-description">{project2.data.description}</p>
-              </div>
-              <div class="tags-boxes">
+        <li class="box">
+          <a
+            href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="info">
+              <img
+                class="icon"
+                src="/assets/icons/book.svg"
+                alt="civictech"
+                width="20"
+              />
+              <h3 class="title boxTextColor">Civic Tech Opportunities</h3>
+            </div>
+            <p class="p boxTextColor">
+              Notion database of civic tech jobs, intenships, and volunteer opps
+            </p>
+          </a>
+        </li>
+        
+        <li class="box">
+          <a
+            href="https://www.samkitkat.com/d20/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="info">
+              <img
+                class="icon"
+                src="/assets/icons/heart.svg"
+                alt="react"
+                width="20"
+              />
+              <h3 class="title boxTextColor">Bet you can't get a 20 ;)</h3>
+            </div>
+            <p class="p boxTextColor">
+              Try out my d20 roller!
+            </p>
+            <div class="tags-boxes">
                 {
                   project2.data.tags.map((tag) => (
                     <div class="tag-box">
@@ -120,34 +193,86 @@ const project3 = blog[0];
                   ))
                 }
               </div>
-            </a>
-          </li>
+          </a>
+        </li>
 
-          <li class="project-box">
-            <a
-              class="a-project"
-              href="https://www.courier.com/blog/intro-to-your-courier-cheerleading-catalyst/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="title-projects"><h3>{project3.data.title}</h3></div>
-              <div>
-                <p class="project-description">{project3.data.description}</p>
-              </div>
-              <div class="tags-boxes">
+        <li class="box" title="gradChanger">
+          <a href={`${project2.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+            <div class="info">
+              <img
+                class="icon"
+                src="/assets/icons/book.svg"
+                alt="discord"
+                width="20"
+              />
+              <h3 class="title boxTextColor">{project2.data.title}</h3>
+            </div>
+            <p class="p boxTextColor">{project2.data.description}</p>
+             <div class="tags-boxes">
                 {
-                  project3.data.tags.map((tag) => (
+                  project2.data.tags.map((tag) => (
                     <div class="tag-box">
                       <p class="tags">{tag}</p>
                     </div>
                   ))
                 }
               </div>
+          </a>
+        </li>
+        <li class="box" title="vday">
+            <a href={`${project5.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/heart.svg"
+                  alt="heart"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">{project5.data.title}</h3>
+              </div>
+              <p class="p boxTextColor">{project5.data.description}</p>
+              <div class="tags-boxes">
+                  {
+                    project5.data.tags.map((tag) => (
+                      <div class="tag-box">
+                        <p class="tags">{tag}</p>
+                      </div>
+                    ))
+                  }
+                </div>
             </a>
           </li>
-        </ul>
-      </section>
+    </ul>
+
+    <div class="showTitle">
+        <div class="bio">
+            <p class="showTitle boxTextColor">🎬&nbsp;&nbsp;  My Videos  &nbsp;&nbsp;🎬</p>
+        </div>
+    </div>
+    <ul class="boxes">
+        <li class="box" title="watch my yt vids ;)">
+          <div class="frame1">
+            <iframe
+              class="frame"
+              src={links.iframeYoutube.url}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </li>
+        <li class="box" title="follow me on twitch ;)">
+          <div class="frame1">
+            <iframe
+              class="frame"
+              src={links.iframeTwitch.url}
+              allowfullscreen="true"
+            >
+            </iframe>
+          </div>
+        </li>
+      </ul>
+    </div>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>

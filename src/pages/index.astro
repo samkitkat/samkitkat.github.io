@@ -1,8 +1,22 @@
 ---
-import "../styles/linkPage.css";
+// import "../../styles/linkPage.css";
 import { links } from "../consts";
-import Socials from "../components/Socials.astro";
 const today = new Date();
+
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+import { getCollection } from "astro:content";
+const posts = await getCollection("projects");
+const blog = await getCollection("blog");
+const project0 = posts[0];
+const project1 = posts[1];
+const project2 = posts[2];
+const project3 = posts[3];
+const project4 = posts[4];
+const project5 = posts[5];
 ---
 
 <!DOCTYPE html>
@@ -57,44 +71,80 @@ const today = new Date();
 
       gtag("config", "G-F4F7YBFSTK");
     </script>
-  </head>
 
+<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
   <body>
-    <div id="vanta" style="position: absolute"></div>
+    <Header />
     <main>
       <header>
         <!-- <h1>Hello World!</h1> -->
         <img class="pic" src="/assets/images/selfie.jpg" />
 
         <div class="nameBox">
-          <a href="/portfolio" target="_blank" rel="noopener noreferrer">
+          <a href="/">
             <h1 class="name" title="click to view my site 🐸">samkitkat</h1>
           </a>
         </div>
-
-        <Socials />
-
         <div class="bio">
-          <p>🌿 Just a coder girl in a coder world 🌿</p>
-          <p>I stream tech stuff on twitch tue-thurs 1pm pst</p>
+          <p class="boxTextColor">🌿 Just a coder girl in a coder world 🌿</p>
         </div>
       </header>
 
+      <div class="showcase">
+        <div class="showTitle">
+            <div class="bio">
+                <p class="showTitle boxTextColor">⭐&nbsp;&nbsp;  My Projects  &nbsp;&nbsp;⭐</p>
+            </div>
+        </div>
+
       <ul class="boxes">
-        <li class="box" title="let's party in the discord 🎉">
-          <a href={links.discord.url} target="_blank" rel="noopener noreferrer">
+        <li class="box" title="todo app">
+          <a href={`${project4.data.projectURL}`} target="_blank" rel="noopener noreferrer">
             <div class="info">
               <img
                 class="icon"
-                src={links.discord.icon}
+                src="/assets/icons/book.svg"
                 alt="discord"
                 width="20"
               />
-              <h3 class="title">Our Discord</h3>
+              <h3 class="title boxTextColor">{project4.data.title}</h3>
             </div>
-            <p class="p">Join our coding Discord community where chat and exchange valuable coding resources!</p>
+            <p class="p boxTextColor">{project4.data.description}</p>
+             <div class="tags-boxes">
+                {
+                  project4.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
           </a>
         </li>
+        <li class="box" title="cli">
+            <a href={`${project0.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/heart.svg"
+                  alt="heart"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">{project0.data.title}</h3>
+              </div>
+              <p class="p boxTextColor">{project0.data.description}</p>
+              <div class="tags-boxes">
+                  {
+                    project0.data.tags.map((tag) => (
+                      <div class="tag-box">
+                        <p class="tags">{tag}</p>
+                      </div>
+                    ))
+                  }
+                </div>
+            </a>
+          </li>
         <li class="box">
           <a
             href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f"
@@ -108,13 +158,14 @@ const today = new Date();
                 alt="civictech"
                 width="20"
               />
-              <h3 class="title">Civic Tech Opportunities</h3>
+              <h3 class="title boxTextColor">Civic Tech Opportunities</h3>
             </div>
-            <p class="p">
+            <p class="p boxTextColor">
               Notion database of civic tech jobs, intenships, and volunteer opps
             </p>
           </a>
         </li>
+        
         <li class="box">
           <a
             href="https://www.samkitkat.com/d20/"
@@ -128,27 +179,77 @@ const today = new Date();
                 alt="react"
                 width="20"
               />
-              <h3 class="title">Bet you can't get a 20 ;)</h3>
+              <h3 class="title boxTextColor">Bet you can't get a 20 ;)</h3>
             </div>
-            <p class="p">
+            <p class="p boxTextColor">
               Try out my d20 roller!
             </p>
+            <div class="tags-boxes">
+                {
+                  project2.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
           </a>
         </li>
-        <li class="box" title="☕">
-          <a href={links.kofi.url} target="_blank" rel="noopener noreferrer">
+
+        <li class="box" title="gradChanger">
+          <a href={`${project2.data.projectURL}`} target="_blank" rel="noopener noreferrer">
             <div class="info">
               <img
                 class="icon"
-                src={links.kofi.icon}
-                alt="coursera"
+                src="/assets/icons/book.svg"
+                alt="discord"
                 width="20"
               />
-              <h3 class="title">Buy Me A Coffee</h3>
+              <h3 class="title boxTextColor">{project2.data.title}</h3>
             </div>
-            <p class="p">Your support is always appreciated</p>
+            <p class="p boxTextColor">{project2.data.description}</p>
+             <div class="tags-boxes">
+                {
+                  project2.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
           </a>
         </li>
+        <li class="box" title="vday">
+            <a href={`${project5.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/heart.svg"
+                  alt="heart"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">{project5.data.title}</h3>
+              </div>
+              <p class="p boxTextColor">{project5.data.description}</p>
+              <div class="tags-boxes">
+                  {
+                    project5.data.tags.map((tag) => (
+                      <div class="tag-box">
+                        <p class="tags">{tag}</p>
+                      </div>
+                    ))
+                  }
+                </div>
+            </a>
+          </li>
+    </ul>
+
+    <div class="showTitle">
+        <div class="bio">
+            <p class="showTitle boxTextColor">🎬&nbsp;&nbsp;  My Videos  &nbsp;&nbsp;🎬</p>
+        </div>
+    </div>
+    <ul class="boxes">
         <li class="box" title="watch my yt vids ;)">
           <div class="frame1">
             <iframe
@@ -170,9 +271,8 @@ const today = new Date();
           </div>
         </li>
       </ul>
-      <footer class="footer">
-        <h1>♡ {today.getFullYear()} سمر ♡</h1>
-      </footer>
+    </div>
+      <Footer />
     </main>
   </body>
 </html>

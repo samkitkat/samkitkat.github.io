@@ -1,22 +1,9 @@
 ---
-import "../../styles/linkPage.css";
 import { links } from "../../consts";
+import "../../styles/linkPage.css";
+
+import Socials from "../../components/Socials.astro";
 const today = new Date();
-
-// import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-// import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-
-import { getCollection } from "astro:content";
-const posts = await getCollection("projects");
-const blog = await getCollection("blog");
-const project0 = posts[0];
-const project1 = posts[1];
-const project2 = posts[2];
-const project3 = posts[3];
-const project4 = posts[4];
-const project5 = posts[5];
 ---
 
 <!DOCTYPE html>
@@ -71,14 +58,10 @@ const project5 = posts[5];
 
       gtag("config", "G-F4F7YBFSTK");
     </script>
-    <style>
-        
-    </style>
+
   </head>
 
-
   <body>
-    <Header />
     <div id="vanta" style="position: absolute"></div>
     <main>
       <header>
@@ -90,65 +73,30 @@ const project5 = posts[5];
             <h1 class="name" title="click to view my site 🐸">samkitkat</h1>
           </a>
         </div>
+
+        <Socials />
+
         <div class="bio">
           <p>🌿 Just a coder girl in a coder world 🌿</p>
+          <p>I stream tech stuff on twitch tue-thurs 1pm pst</p>
         </div>
       </header>
 
-      <div class="showcase">
-        <div class="showTitle">
-            <div class="bio">
-                <p class="showTitle">⭐&nbsp;&nbsp;  My Projects  &nbsp;&nbsp;⭐</p>
-            </div>
-        </div>
-
       <ul class="boxes">
-        <li class="box" title="todo app">
-          <a href={`${project4.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+        <li class="box" title="let's party in the discord 🎉">
+          <a href={links.discord.url} target="_blank" rel="noopener noreferrer">
             <div class="info">
               <img
                 class="icon"
-                src="/assets/icons/book.svg"
+                src={links.discord.icon}
                 alt="discord"
                 width="20"
               />
-              <h3 class="title">{project4.data.title}</h3>
+              <h3 class="title">Our Discord</h3>
             </div>
-            <p class="p">{project4.data.description}</p>
-             <div class="tags-boxes">
-                {
-                  project4.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
+            <p class="p">Join our coding Discord community where chat and exchange valuable coding resources!</p>
           </a>
         </li>
-        <li class="box" title="cli">
-            <a href={`${project0.data.projectURL}`} target="_blank" rel="noopener noreferrer">
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/heart.svg"
-                  alt="heart"
-                  width="20"
-                />
-                <h3 class="title">{project0.data.title}</h3>
-              </div>
-              <p class="p">{project0.data.description}</p>
-              <div class="tags-boxes">
-                  {
-                    project0.data.tags.map((tag) => (
-                      <div class="tag-box">
-                        <p class="tags">{tag}</p>
-                      </div>
-                    ))
-                  }
-                </div>
-            </a>
-          </li>
         <li class="box">
           <a
             href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f"
@@ -169,7 +117,6 @@ const project5 = posts[5];
             </p>
           </a>
         </li>
-        
         <li class="box">
           <a
             href="https://www.samkitkat.com/d20/"
@@ -188,72 +135,22 @@ const project5 = posts[5];
             <p class="p">
               Try out my d20 roller!
             </p>
-            <div class="tags-boxes">
-                {
-                  project2.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
           </a>
         </li>
-
-        <li class="box" title="gradChanger">
-          <a href={`${project2.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+        <li class="box" title="☕">
+          <a href={links.kofi.url} target="_blank" rel="noopener noreferrer">
             <div class="info">
               <img
                 class="icon"
-                src="/assets/icons/book.svg"
-                alt="discord"
+                src={links.kofi.icon}
+                alt="kofi"
                 width="20"
               />
-              <h3 class="title">{project2.data.title}</h3>
+              <h3 class="title">Buy Me A Coffee</h3>
             </div>
-            <p class="p">{project2.data.description}</p>
-             <div class="tags-boxes">
-                {
-                  project2.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
+            <p class="p">Your support is always appreciated</p>
           </a>
         </li>
-        <li class="box" title="vday">
-            <a href={`${project5.data.projectURL}`} target="_blank" rel="noopener noreferrer">
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/heart.svg"
-                  alt="heart"
-                  width="20"
-                />
-                <h3 class="title">{project5.data.title}</h3>
-              </div>
-              <p class="p">{project5.data.description}</p>
-              <div class="tags-boxes">
-                  {
-                    project5.data.tags.map((tag) => (
-                      <div class="tag-box">
-                        <p class="tags">{tag}</p>
-                      </div>
-                    ))
-                  }
-                </div>
-            </a>
-          </li>
-    </ul>
-
-    <div class="showTitle">
-        <div class="bio">
-            <p class="showTitle">🎬&nbsp;&nbsp;  My Videos  &nbsp;&nbsp;🎬</p>
-        </div>
-    </div>
-    <ul class="boxes">
         <li class="box" title="watch my yt vids ;)">
           <div class="frame1">
             <iframe
@@ -275,8 +172,9 @@ const project5 = posts[5];
           </div>
         </li>
       </ul>
-    </div>
-      <Footer />
+      <footer class="footer">
+        <h1>♡ {today.getFullYear()} سمر ♡</h1>
+      </footer>
     </main>
   </body>
 </html>

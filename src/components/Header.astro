@@ -1,14 +1,14 @@
----
+<!-- ---
 import HeaderLink from "./HeaderLink.astro";
 ---
 
 <div class="line"></div>
   <header>
   <nav class="header">
-    <HeaderLink class="hover-underline-animation" href="/portfolio">Home</HeaderLink>
-    <HeaderLink class="hover-underline-animation" href="/projects">Projects</HeaderLink>
-    <HeaderLink class="hover-underline-animation" href="/blog">Blog</HeaderLink>
-    <HeaderLink class="hover-underline-animation" href="/caseStudy">Case Study</HeaderLink>
+    <HeaderLink class="hover-underline-animation" href="/portfolio">Samkitkat</HeaderLink>
+    <HeaderLink class="hover-underline-animation" href="/projects">Case Studies</HeaderLink>
+    <HeaderLink class="hover-underline-animation" href="/blog">About</HeaderLink>
+    <HeaderLink class="hover-underline-animation" href="/caseStudy">Blog</HeaderLink>
   </nav>
 </header>
 
@@ -37,6 +37,101 @@ import HeaderLink from "./HeaderLink.astro";
     header {
       flex-direction: column;
       align-items: flex-start;
+    }
+  }
+</style> -->
+
+
+---
+import HeaderLink from "./HeaderLink.astro";
+---
+<header>
+  <nav class="header">
+    <div class="logo-container">
+      <a href="/" class="logo-link">
+        <div class="logo-shape">
+          <!-- Add your logo SVG or image here -->
+          <svg width="40" height="40"><use href="#svg8712032193"></use></svg>
+        </div>
+        <p class="name" style="font-size: 42px;">Samar</p>
+      </a>
+    </div>
+    <div class="menu-items">
+      <HeaderLink class="hover-underline-animation" href="/caseStudy">Case Studies</HeaderLink>
+      <HeaderLink class="hover-underline-animation" href="/projects">About</HeaderLink>
+      <HeaderLink class="hover-underline-animation" href="/blog">Blog</HeaderLink>
+    </div>
+  </nav>
+</header>
+
+<style>
+
+  .header {
+    margin: 1em auto;
+    padding: 0em 2em 0em 0em;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  .logo-shape {
+    margin-right: 0.5rem;
+  }
+
+  .menu-items {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .hover-underline-animation {
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    color: #588157;
+  }
+
+  .hover-underline-animation::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #588157;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  @media only screen and (max-width: 680px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menu-items {
+      flex-direction: column;
+      gap: 0.5rem;
     }
   }
 </style>
