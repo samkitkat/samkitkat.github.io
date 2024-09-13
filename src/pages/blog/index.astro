@@ -15,9 +15,11 @@ const posts = (await getCollection("blog")).sort(
     <BaseHead title="blog" description="hello" />
   </head>
   <body>
-    <Header />
     <main>
-      <header><h1 class="name">= Blog =</h1></header>
+      <header>
+        <Header />
+        <h1 class="name">= Blog =</h1>
+      </header>
       <section class="showcase">
         <ul class="boxes">
           {
