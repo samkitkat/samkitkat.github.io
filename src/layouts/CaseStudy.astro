@@ -27,7 +27,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<article class="box">
+			<article class="box caseStudy">
 				
 				{pubDate && <p class="date"><a href="/blog">↩</a> {pubDate.toLocaleDateString('en-US')}</p>}
 				{
@@ -37,7 +37,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 						</div>
 					)
 				}
-				<h2 class="contentTitle">LAWA {title}</h2>
+				<h1 class="contentTitle">LAWA {title}</h1>
 
 				<slot />
 			</article>

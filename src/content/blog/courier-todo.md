@@ -21,12 +21,11 @@ But I didn't stop there—I wanted to take the sense of accomplishment to the ne
 
 ### To bring these cheerful notifications to life, we need three key components:
 
-
-<ol>
-<li>An app: in our case a task tracker,</li>
-<li>Segment: a tool to track events, such as completing a task,</li>
-<li>and Courier: a tool that sends notifications based on those events.</li>
-</ol>
+<ul>
+<li>1. An app: in our case a task tracker</li>
+<li>2. Segment: a tool to track events, such as completing a task</li>
+<li>3. Courier: a tool that sends notifications based on those events</li>
+</ul>
 
 
 By combining these three essential components, we create an exceptional todo app experience that not only keeps us organized but also adds a delightful touch of motivation and celebration along the way. So let's get started and embrace the power of cheerful notifications to supercharge our productivity!
@@ -38,23 +37,21 @@ By combining these three essential components, we create an exceptional todo app
 
 Create a Segment account and workspace then follow the below:
 
-<ol>
-<li>Go to your sources tab & click on the source you want to add courier to</li>
-<li>Click “Add Destination” & then search for “Courier”</li>
-<li>Now you can click “Configure Courier” and add your destination name</li>
-<li>To finish setup you will need your Courier API key, which you can find <a href="https://app.courier.com/channels/segment" target="_blank" rel="noopener noreferrer">here</a></li>
-</ol>
+<ul>
+<li>1. Go to your sources tab & click on the source you want to add courier to</li>
+<li>2. Click “Add Destination” & then search for “Courier”</li>
+<li>3. Now you can click “Configure Courier” and add your destination name</li>
+<li>4. To finish setup you will need your Courier API key, which you can find <a href="https://app.courier.com/channels/segment" target="_blank" rel="noopener noreferrer">here</a></li>
+</ul>
 
 Now that it is connected you will be able to see all events that Segment is tracking though the Courier app!
 
-<a class="blogLinks" href="https://www.courier.com/docs/external-integrations/segment/segment-integration/" target="_blank" rel="noopener noreferrer" style="font-weight: bold; text-decoration: underline;">Step by step instructions for configuring Segment</a>
+<a class="blogLinks" href="https://www.courier.com/docs/external-integrations/segment/segment-integration/" target="_blank" rel="noopener noreferrer">Step by step instructions for configuring Segment</a>
 
 <br>
 
 
-<h2 style="text-align: center;"> ✨ Code Time ✨ </h2>
-
-<br>
+<h1 style="text-align: center;"> ✨✨ Code Time ✨✨ </h1>
 
 # Step 2: Importing Segment Analytical Tracking
 
@@ -99,13 +96,13 @@ This function helps me see if I've finished everything on my list or if there's 
 
 Oooh the fun part! Adding the Inbox and Toast functionalities. It was incredibly simple to incorporate them into my project. I found all the necessary information <a href="https://www.courier.com/docs/inbox/" target="_blank" rel="noopener noreferrer">this section of the docs.</a>
 
-Literally as easy as:
+### Literally as easy as:
 
-<ol>
-<li>npm i @trycourier/react-provider</li>
-<li>npm i @trycourier/react-inbox</li>
-<li>npm i @trycourier/react-toast</li>
-</ol>
+<ul>
+<li>1. npm i @trycourier/react-provider</li>
+<li>2. npm i @trycourier/react-inbox</li>
+<li>3. npm i @trycourier/react-toast</li>
+</ul>
 
 Once you've completed these steps, you'll have a cute little "🔔" icon wherever you choose to place it. This icon will serve as your inbox, hosting all your incoming notifications!
 
@@ -133,9 +130,7 @@ To begin, navigate to the designer section within your Courier app. Here, you ca
 
 In the automations tab, you will set up the triggers for your notifications. Choose "Segment" as the trigger and specify the name of the event you previously tracked. Next, add the Courier UserID to determine who will receive the notification. From the dropdown menu, select the notification you designed earlier. 
 
-<br>
 <h1 style="text-align: center;"> And just like that, voila! 🎉 </h1>
-<br>
 
 <div align="center"><img src="../../assets/images/todo-app.gif" width="100%"></div>
 
@@ -143,8 +138,8 @@ The automation is now set up, and your carefully crafted notification will be se
 
 Exploring how Courier collaborates with Segment to send notifications was an incredibly enjoyable learning experience for me. If you're interested in delving further into the code or experimenting with the app, feel free to visit the <a href="https://github.com/samkitkat/todo-app" target="_blank" rel="noopener noreferrer">Github Repo</a> and <a href="https://todo-app-samkitkat.vercel.app/" target="_blank" rel="noopener noreferrer">Todo App</a>. Please note that this project is still a work in progress, so be sure to stay tuned for future updates and enhancements!
 
-<a href="https://www.courier.com/blog/intro-to-your-courier-cheerleading-catalyst/" target="_blank" rel="noopener noreferrer" style="font-weight: bold; text-decoration: underline;">
-read this same article but on the courier site!
+<a class="blogLinks" href="https://www.courier.com/blog/intro-to-your-courier-cheerleading-catalyst/" target="_blank" rel="noopener noreferrer">
+Read this same article but on the courier site!
 </a>
 
 <br>

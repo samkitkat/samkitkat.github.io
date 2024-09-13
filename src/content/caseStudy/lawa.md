@@ -18,7 +18,7 @@ Problem: The website lacked essential information about the organization and its
 
 During the research phase, I examined various nonprofit websites to gather insights on design and content structure.
 
-My findings:
+### My findings:
 <ul>
 <li>Essential information about the organization was prominently featured on the home page.</li>
 <li>Subpages were dedicated to providing in-depth information about the services and work of the organization.</li>
@@ -37,14 +37,14 @@ Given that WordPress was our platform of choice, I decided to streamline the pro
 
 During the ideation process, I took into consideration the specific sections we aimed to include on the home page, as well as the sections we planned to add:
 
-Home Page:
+### Home Page:
 <ul>
 <li>Highlight Our Services and Offerings</li>
 <li>Introduce Our Team and Company Identity</li>
 <li>Display Testimonials from Partnering Organizations</li>
 </ul>
 
-Additional Enhancements:
+### Additional Enhancements:
 <ul>
 <li>Create an In-Depth Impact Page</li>
 <li>Develop a Comprehensive Education Page</li>

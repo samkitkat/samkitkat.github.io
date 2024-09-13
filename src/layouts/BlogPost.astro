@@ -25,6 +25,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				main {
 					margin: 2em 2em;
 				}
+				.box {
+					padding: 1em 2em;
+				}
 			}
 		</style>
 	</head>
@@ -32,7 +35,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<article class="box">
+			<article class="box blog">
 				{
 					pubDate && (
 						<p class="date">

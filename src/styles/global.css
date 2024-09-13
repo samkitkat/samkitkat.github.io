@@ -23,9 +23,11 @@
   --p-color: #588157;
   --text-color: #588157;
   --nav-color: #588157;
+  --title: sans-serif;
+
   --primary-color: #588157;
   --secondary-color: #f2f3f4;
-  --title: sans-serif;
+  --accent-color: #EB6424;
 }  
 
 body, html {
@@ -52,12 +54,16 @@ h1 {
 }
 h2 {
   font-family: title;
-  font-size: 26px;
+  font-size: 22px;
+  margin: 0px;
+  margin-top: 10px;
   color: var(--primary-color);
 }
 h3 {
+  font-family: title;
   font-size: 18px;
-  color: var(--primary-color);
+  margin: 0px;
+  margin-top: 5px;
 }
 h4 {
   font-size: 14px;
@@ -76,15 +82,41 @@ b {
 }
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: #EB6424;
   text-underline-offset: 3px;
   cursor: url("/assets/cursors/select.cur"), auto;
 }
-
+a:hover {
+  cursor: url("/assets/cursors/select.cur"), auto;
+}
 a.active {
 }
 a:visited {
-  color: var(--primary-color);
+}
+.blog a {
+  text-decoration: underline;
+}
+.blog h3 {
+  font-family: title;
+
+}
+ol {
+  margin: 0px;
+  margin-bottom: 5px;
+}
+ul > li {
+  color: var(--secondary-color);
+}
+ul > li > a {
+
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+.contentTitle {
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1.2px;
 }
 
 /* body {
@@ -422,6 +454,9 @@ header {
   .showTitle {
       text-align: center;
   }
+  .name {
+    font-size: 10vw;
+  }
 }
 
 .boxes {
@@ -429,7 +464,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   flex-wrap: wrap;
-  column-gap: 5%;
+  column-gap: 2%;
   max-width: 1000px;
   list-style: none;
   margin: 1em auto;
@@ -476,7 +511,6 @@ ul li time {
 }
 
 .box:hover {
-  cursor: url('/assets/cursors/select.cur'), auto;
   transform: scale(1.2);
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -502,13 +536,6 @@ ul li time {
   font-size: 13px;
 }
 
-ul > li > a {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-}
-
 .frame { 
   top: 0;
   left: 0;
@@ -524,13 +551,6 @@ ul > li > a {
   height: 0;
   position: relative;
   padding-bottom: 56.25%;
-}
-
-a {
-  color: #EB6424;
-  text-decoration: none;
-  font-size: 1.1em;
-  cursor: url('/assets/cursors/select.cur'), auto;
 }
 
 .footer {
