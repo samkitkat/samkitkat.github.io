@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-type Props = CollectionEntry<'caseStudy'>['data'];
+type Props = CollectionEntry<"caseStudy">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
@@ -12,37 +12,34 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				margin: 2em 6em;
-				border-radius: 10px;
-				background-color: #f2f3f4;
-			}
-			.box {
-				padding: 1em 3em;
-			}
-		</style>
 	</head>
 
 	<body>
-		<Header />
 		<main>
-			<article class="box caseStudy">
-				
-				{pubDate && <p class="date"><a href="/blog">↩</a> {pubDate.toLocaleDateString('en-US')}</p>}
-				{
-					updatedDate && (
-						<div>
-							Last updated on <time>{updatedDate}</time>
-						</div>
-					)
-				}
-				<h1 class="contentTitle">LAWA {title}</h1>
+			<Header />
+			<div class="layout-main">
+				<article class="layout-box caseStudy">
+					{
+						pubDate && (
+							<p class="date">
+								<a href="/blog">↩</a>{" "}
+								{pubDate.toLocaleDateString("en-US")}
+							</p>
+						)
+					}
+					{
+						updatedDate && (
+							<div>
+								Last updated on <time>{updatedDate}</time>
+							</div>
+						)
+					}
+					<h1 class="contentTitle">LAWA {title}</h1>
 
-				<slot />
-			</article>
+					<slot />
+				</article>
+			</div>
+			<Footer />
 		</main>
-		<!-- {heroImage && <img width={720} height={360} src={heroImage} alt="" />} -->
-		<Footer />
 	</body>
 </html>

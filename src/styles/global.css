@@ -119,6 +119,25 @@ ul > li > a {
   letter-spacing: 1.2px;
 }
 
+
+/* Layouts */
+.layout-main {
+  margin: 2em 6em;
+  border-radius: 10px;
+  background-color: #f2f3f4;
+}
+.layout-box {
+  padding: 1em 3em;
+}
+@media only screen and (max-width: 768px) {
+  .layout-main {
+    margin: 2em 2em;
+  }
+  .layout-box {
+    padding: 1em 1em;
+  }
+}
+
 /* body {
   font-family: sans-serif;
   cursor: url("/assets/cursors/main.cur"), auto;
@@ -456,6 +475,9 @@ header {
   }
   .name {
     font-size: 10vw;
+  }
+  .socials {
+    width: 285px;
   }
 }
 

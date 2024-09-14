@@ -61,7 +61,8 @@ const project5 = posts[5];
       });
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -72,7 +73,7 @@ const project5 = posts[5];
       gtag("config", "G-F4F7YBFSTK");
     </script>
 
-<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
     <main>
@@ -93,25 +94,31 @@ const project5 = posts[5];
 
       <div class="showcase">
         <div class="showTitle">
-            <div class="bio">
-                <p class="showTitle boxTextColor">⭐&nbsp;&nbsp;  My Projects  &nbsp;&nbsp;⭐</p>
-            </div>
+          <div class="bio">
+            <p class="showTitle boxTextColor">
+              ⭐&nbsp;&nbsp; My Projects &nbsp;&nbsp;⭐
+            </p>
+          </div>
         </div>
 
-      <ul class="boxes">
-        <li class="box" title="todo app">
-          <a href={`${project4.data.projectURL}`} target="_blank" rel="noopener noreferrer">
-            <div class="info">
-              <img
-                class="icon"
-                src="/assets/icons/book.svg"
-                alt="discord"
-                width="20"
-              />
-              <h3 class="title boxTextColor">{project4.data.title}</h3>
-            </div>
-            <p class="p boxTextColor">{project4.data.description}</p>
-             <div class="tags-boxes">
+        <ul class="boxes">
+          <li class="box" title="todo app">
+            <a
+              href={`${project4.data.projectURL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/book.svg"
+                  alt="discord"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">{project4.data.title}</h3>
+              </div>
+              <p class="p boxTextColor">{project4.data.description}</p>
+              <div class="tags-boxes">
                 {
                   project4.data.tags.map((tag) => (
                     <div class="tag-box">
@@ -120,10 +127,14 @@ const project5 = posts[5];
                   ))
                 }
               </div>
-          </a>
-        </li>
-        <li class="box" title="cli">
-            <a href={`${project0.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+            </a>
+          </li>
+          <li class="box" title="cli">
+            <a
+              href={`${project0.data.projectURL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="info">
                 <img
                   class="icon"
@@ -135,80 +146,55 @@ const project5 = posts[5];
               </div>
               <p class="p boxTextColor">{project0.data.description}</p>
               <div class="tags-boxes">
-                  {
-                    project0.data.tags.map((tag) => (
-                      <div class="tag-box">
-                        <p class="tags">{tag}</p>
-                      </div>
-                    ))
-                  }
-                </div>
+                {
+                  project0.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
             </a>
           </li>
-        <li class="box">
-          <a
-            href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="info">
-              <img
-                class="icon"
-                src="/assets/icons/book.svg"
-                alt="civictech"
-                width="20"
-              />
-              <h3 class="title boxTextColor">Civic Tech Opportunities</h3>
-            </div>
-            <p class="p boxTextColor">
-              Notion database of civic tech jobs, intenships, and volunteer opps
-            </p>
-          </a>
-        </li>
-        
-        <li class="box">
-          <a
-            href="https://www.samkitkat.com/d20/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="info">
-              <img
-                class="icon"
-                src="/assets/icons/heart.svg"
-                alt="react"
-                width="20"
-              />
-              <h3 class="title boxTextColor">Bet you can't get a 20 ;)</h3>
-            </div>
-            <p class="p boxTextColor">
-              Try out my d20 roller!
-            </p>
-            <div class="tags-boxes">
-                {
-                  project2.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
+          <li class="box">
+            <a
+              href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/book.svg"
+                  alt="civictech"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">Civic Tech Opportunities</h3>
               </div>
-          </a>
-        </li>
+              <p class="p boxTextColor">
+                Notion database of civic tech jobs, intenships, and volunteer
+                opps
+              </p>
+            </a>
+          </li>
 
-        <li class="box" title="gradChanger">
-          <a href={`${project2.data.projectURL}`} target="_blank" rel="noopener noreferrer">
-            <div class="info">
-              <img
-                class="icon"
-                src="/assets/icons/book.svg"
-                alt="discord"
-                width="20"
-              />
-              <h3 class="title boxTextColor">{project2.data.title}</h3>
-            </div>
-            <p class="p boxTextColor">{project2.data.description}</p>
-             <div class="tags-boxes">
+          <li class="box">
+            <a
+              href="https://www.samkitkat.com/d20/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/heart.svg"
+                  alt="react"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">Bet you can't get a 20 ;)</h3>
+              </div>
+              <p class="p boxTextColor">Try out my d20 roller!</p>
+              <div class="tags-boxes">
                 {
                   project2.data.tags.map((tag) => (
                     <div class="tag-box">
@@ -217,10 +203,42 @@ const project5 = posts[5];
                   ))
                 }
               </div>
-          </a>
-        </li>
-        <li class="box" title="vday">
-            <a href={`${project5.data.projectURL}`} target="_blank" rel="noopener noreferrer">
+            </a>
+          </li>
+
+          <li class="box" title="gradChanger">
+            <a
+              href={`${project2.data.projectURL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="info">
+                <img
+                  class="icon"
+                  src="/assets/icons/book.svg"
+                  alt="discord"
+                  width="20"
+                />
+                <h3 class="title boxTextColor">{project2.data.title}</h3>
+              </div>
+              <p class="p boxTextColor">{project2.data.description}</p>
+              <div class="tags-boxes">
+                {
+                  project2.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
+            </a>
+          </li>
+          <li class="box" title="vday">
+            <a
+              href={`${project5.data.projectURL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div class="info">
                 <img
                   class="icon"
@@ -232,46 +250,48 @@ const project5 = posts[5];
               </div>
               <p class="p boxTextColor">{project5.data.description}</p>
               <div class="tags-boxes">
-                  {
-                    project5.data.tags.map((tag) => (
-                      <div class="tag-box">
-                        <p class="tags">{tag}</p>
-                      </div>
-                    ))
-                  }
-                </div>
+                {
+                  project5.data.tags.map((tag) => (
+                    <div class="tag-box">
+                      <p class="tags">{tag}</p>
+                    </div>
+                  ))
+                }
+              </div>
             </a>
           </li>
-    </ul>
+        </ul>
 
-    <div class="showTitle">
-        <div class="bio">
-            <p class="showTitle boxTextColor">🎬&nbsp;&nbsp;  My Videos  &nbsp;&nbsp;🎬</p>
+        <div class="showTitle">
+          <div class="bio">
+            <p class="showTitle boxTextColor">
+              🎬&nbsp;&nbsp; My Videos &nbsp;&nbsp;🎬
+            </p>
+          </div>
         </div>
-    </div>
-    <ul class="boxes">
-        <li class="box" title="watch my yt vids ;)">
-          <div class="frame1">
-            <iframe
-              class="frame"
-              src={links.iframeYoutube.url}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </li>
-        <li class="box" title="follow me on twitch ;)">
-          <div class="frame1">
-            <iframe
-              class="frame"
-              src={links.iframeTwitch.url}
-              allowfullscreen="true"
-            >
-            </iframe>
-          </div>
-        </li>
-      </ul>
-    </div>
+        <ul class="boxes">
+          <li class="box" title="watch my yt vids ;)">
+            <div class="frame1">
+              <iframe
+                class="frame"
+                src={links.iframeYoutube.url}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </li>
+          <li class="box" title="follow me on twitch ;)">
+            <div class="frame1">
+              <iframe
+                class="frame"
+                src={links.iframeTwitch.url}
+                allowfullscreen="true"
+              >
+              </iframe>
+            </div>
+          </li>
+        </ul>
+      </div>
       <Footer />
     </main>
   </body>

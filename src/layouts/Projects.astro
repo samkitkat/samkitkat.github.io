@@ -1,10 +1,10 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, projectURL, updatedDate } = Astro.props;
 ---
@@ -14,7 +14,7 @@ const { title, description, pubDate, projectURL, updatedDate } = Astro.props;
 		<BaseHead title={title} description={description} />
 		<style>
 			hr {
-				border-top: 1px solid #A3B18A;
+				border-top: 1px solid #a3b18a;
 				margin: 1rem 0;
 			}
 			a {
@@ -32,15 +32,19 @@ const { title, description, pubDate, projectURL, updatedDate } = Astro.props;
 	</head>
 
 	<body>
-		<Header />
 		<main>
+			<Header />
 			<article>
-
 				<h1 class="contentTitle">{title}</h1>
 
 				<div class="project-site">
-
-					{pubDate && <p class="date">{pubDate.toLocaleDateString('en-US')}</p>}
+					{
+						pubDate && (
+							<p class="date">
+								{pubDate.toLocaleDateString("en-US")}
+							</p>
+						)
+					}
 					{
 						updatedDate && (
 							<div>
@@ -49,7 +53,11 @@ const { title, description, pubDate, projectURL, updatedDate } = Astro.props;
 						)
 					}
 					<div>
-						<a href={projectURL} target="_blank" rel="noopener noreferrer">
+						<a
+							href={projectURL}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<h4>view site</h4>
 						</a>
 					</div>
@@ -58,8 +66,7 @@ const { title, description, pubDate, projectURL, updatedDate } = Astro.props;
 				<hr />
 				<slot />
 			</article>
+			<Footer />
 		</main>
-		<!-- {heroImage && <img width={720} height={360} src={heroImage} alt="" />} -->
-		<Footer />
 	</body>
 </html>

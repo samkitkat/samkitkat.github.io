@@ -1,5 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
+import Socials from "./Socials.astro";
 ---
 
 <header>
@@ -23,6 +24,10 @@ import HeaderLink from "./HeaderLink.astro";
       <HeaderLink class="hover-underline-animation" href="/blog">
         Blog
       </HeaderLink>
+
+      <div class="footer-overlay" id="footer-overlay">
+        <Socials />
+      </div>
     </div>
 
     <div class="menu-icon" id="menu-icon">&#9776;</div>
@@ -30,6 +35,10 @@ import HeaderLink from "./HeaderLink.astro";
 </header>
 
 <style>
+  .footer-overlay {
+    display: none;
+  }
+
   .header {
     margin: 1em auto;
     padding: 0em 2em 0em 0em;
@@ -143,14 +152,25 @@ import HeaderLink from "./HeaderLink.astro";
     .menu-overlay {
       display: flex;
     }
+
+    .footer-overlay {
+      display: block;
+      margin-top: 20px;
+    }
+
+    .socials {
+      width: 285;
+    }
   }
 </style>
 
 <script>
   const menuIcon = document.getElementById("menu-icon");
   const menuItemsOverlay = document.getElementById("menu-items");
+  const footerOverlay = document.getElementById("footer-overlay");
 
   menuIcon.addEventListener("click", () => {
     menuItemsOverlay.classList.toggle("menu-overlay");
+    footerOverlay.classList.toggle("footer-visible");
   });
 </script>

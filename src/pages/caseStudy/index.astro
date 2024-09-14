@@ -34,24 +34,21 @@ const posts = (await getCollection("caseStudy")).sort(
                     })}
                   </time>
                   <h3 class="title boxTextColor">{post.data.title}</h3>
-                <p class="p boxTextColor">{post.data.description}</p>
-                <div class="tags-boxes">
-                {
-                  post.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </a>
+                  <p class="p boxTextColor">{post.data.description}</p>
+                  <div class="tags-boxes">
+                    {post.data.tags.map((tag) => (
+                      <div class="tag-box">
+                        <p class="tags">{tag}</p>
+                      </div>
+                    ))}
+                  </div>
+                </a>
               </li>
             ))
           }
         </ul>
       </section>
+      <Footer />
     </main>
-
-    <Footer />
   </body>
 </html>
