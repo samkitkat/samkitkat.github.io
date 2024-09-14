@@ -32,6 +32,8 @@ By combining these three essential components, we create an exceptional todo app
 
 *I invite you to visit the <a href="https://github.com/samkitkat/todo-app" target="_blank" rel="noopener noreferrer">Github Repo</a> for this app to see all the code. If you find the repository helpful or inspiring, don't forget to show your support by giving it a star! Your star would be greatly appreciated and would motivate me to continue improving the app and sharing more useful resources in the future. Thank you in advance for your support!*
 
+<br />
+
 # Step 1: Adding Courier as a Destination in Segment
 
 
@@ -48,10 +50,7 @@ Now that it is connected you will be able to see all events that Segment is trac
 
 <a class="blogLinks" href="https://www.courier.com/docs/external-integrations/segment/segment-integration/" target="_blank" rel="noopener noreferrer">Step by step instructions for configuring Segment</a>
 
-<br>
-
-
-<h1 style="text-align: center;"> ✨✨ Code Time ✨✨ </h1>
+<br />
 
 # Step 2: Importing Segment Analytical Tracking
 
@@ -92,6 +91,8 @@ This function helps me see if I've finished everything on my list or if there's 
 
 <span style="color:#3C44D7; font-weight: bold; font-size: 16px;">Note:</span> Please be aware that if you have any ad-blocking extensions enabled, they might interfere with the events being tracked by Segment. As a result, the tracked events may not be sent through and won't be visible in the logs. Consequently, notifications based on these events will not be sent as well.
 
+<br />
+
 # Step 3: Importing Courier's Inbox and Toast Notifications
 
 Oooh the fun part! Adding the Inbox and Toast functionalities. It was incredibly simple to incorporate them into my project. I found all the necessary information <a href="https://www.courier.com/docs/inbox/" target="_blank" rel="noopener noreferrer">this section of the docs.</a>
@@ -121,6 +122,8 @@ return (
      </CourierProvider>
 )
 ```
+
+<br />
 
 # Step 4: Putting it All Together!
 
