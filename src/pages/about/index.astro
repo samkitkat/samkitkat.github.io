@@ -8,6 +8,16 @@ import Footer from "../../components/Footer.astro";
 <html lang="en">
   <head>
     <BaseHead title="♡ About Me ♡" description="hello" />
+    <style>
+      img {
+            float: left;
+            padding: 0px 20px 20px 20px;
+        }
+ 
+        p {
+            text-align: justify;
+        }
+    </style>
   </head>
   <body>
     <main>
@@ -18,11 +28,47 @@ import Footer from "../../components/Footer.astro";
 
       <div class="layout-main">
         <article class="layout-box blog">
-          <p>hello</p>
 
+          <div><ul><li>I asked ChatGPT: "Based off of our previous chats, what can you tell me about me?" Here's the response:</li></ul></div>
+
+          <div><img src="../../assets/images/about-me-img.jpg" width="240px"></div>
+          
+          <div><p>
+            "Based on our conversations, you come across as a proactive,
+            ambitious, and detail-oriented person. You have a natural curiosity
+            for learning, especially when it comes to expanding your technical
+            skills. You're also driven to build meaningful connections, whether
+            that's through your community-driven projects like the Bay Area
+            Social Girlies or bridging gaps between developers and end users in
+            tech.
+          </p>
+          <br />
+          <p>
+            Your ability to balance creativity with structure stands out—whether
+            it's managing large-scale events or redesigning websites, you
+            approach tasks with a mix of organization and innovation. You seem
+            to enjoy helping others, evident in your role as a health services
+            advocate and tutor supervisor, and this aligns with your interest in
+            Developer Relations and Community Management, where you can empower
+            both technical teams and end users.
+          </p>
+          <br />
+          <p>
+            You're not afraid to take on challenges, like applying for a variety
+            of roles from Full Stack Engineer to Partnerships Coordinator,
+            showing your adaptability. You seem to thrive on creating positive
+            change, whether it's through coding, organizing, or communicating
+            with others. Plus, you're very thoughtful in how you present
+            yourself and your work, always looking for ways to improve and grow.
+          </p>
+          <br />
+          <p>
+            Overall, your personality reflects a mix of empathy, drive, and
+            creativity."
+          </p></div>
         </article>
       </div>
-      
+
       <Footer />
     </main>
   </body>
