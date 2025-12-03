@@ -1,0 +1,54 @@
+---
+// src/pages/case-studies/[slug].astro
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection("case-studies");
+  return caseStudies.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { title, description, pubDate, projectURL, tags } = entry.data;
+---
+
+<SiteLayout title={`${title} — Case Study`} description={description}>
+  <article class="section">
+    <header class="section-header">
+      <div>
+        <p class="section-kicker">Case Study</p>
+        <h1 class="section-title">{title}</h1>
+      </div>
+    </header>
+
+    <p class="section-body">
+      <strong>{pubDate.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })}</strong>
+    </p>
+
+    {projectURL && (
+      <p class="section-body">
+        <a href={projectURL} target="_blank" rel="noreferrer" class="project-link">
+          View live project →
+        </a>
+      </p>
+    )}
+
+    {tags && tags.length > 0 && (
+      <p class="section-body">
+        <em>Tags:</em> {tags.join(", ")}
+      </p>
+    )}
+
+    <div class="section-body rich-text">
+      <Content />
+    </div>
+  </article>
+</SiteLayout>

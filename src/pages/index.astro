@@ -1,274 +1,93 @@
 ---
-// import "../../styles/linkPage.css";
-import { links } from "../consts";
-const today = new Date();
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { personalProjects, workProjects } from "../data/projects";
+import { posts } from "../data/posts";
+import { links } from "../data/consts";
 
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-
-import { getCollection } from "astro:content";
-const posts = await getCollection("projects");
-const blog = await getCollection("blog");
-const project0 = posts[0];
-const project1 = posts[1];
-const project2 = posts[2];
-const project3 = posts[3];
-const project4 = posts[4];
-const project5 = posts[5];
+const featuredPersonal = personalProjects.slice(0, 3);
+const featuredWork = workProjects.slice(0, 2);
+const featuredPosts = posts.slice(0, 2);
 ---
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width = device-width, initial-scale=1" />
-    <link rel="icon" href="/assets/images/frog.png" />
-    <script
-      is:inline
-      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-    ></script>
-    <script
-      is:inline
-      src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"
-    ></script>
-    <script is:inline>
-      window.addEventListener("DOMContentLoaded", () => {
-        VANTA.BIRDS({
-          el: "body",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color1: 0x83b7d7,
-          color2: 0xedcdea,
-          colorMode: "variance",
-          birdSize: 2.0,
-          wingSpan: 12.0,
-          speedLimit: 3.0,
-          separation: 10.0,
-          alignment: 12.0,
-          cohesion: 41.0,
-          quantity: 2.0,
-          speedLimit: 10.0,
-          backgroundAlpha: 0.0,
-        });
-      });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4F7YBFSTK"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+<SiteLayout>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">♡ Welcome to My Portfolio ♡</p>
+      <h1 id="hero-title" class="hero-title"></h1>
+      <p class="hero-subtitle">
+        Hi, I’m Samar—I’m passionate about creating people-centered experiences
+        that blend storytelling, technology, and community impact.
+      </p>
+      <p class="hero-subtitle">
+        My background includes work in community engagement, event planning,
+        digital content creation, and web development. I’ve helped organize
+        hackathons, supported civic outreach through campus roles, and worked
+        with nonprofits to build accessible tools and messaging.
+      </p>
+      <p class="hero-subtitle">
+        Whether I’m coordinating logistics, consulting on communication
+        strategy, or designing a website, I’m focused on work that connects and
+        empowers people.
+      </p>
+      <div class="cta-row">
+        <a href="/projects" class="btn-primary">View projects</a>
+        <a href="/#about" class="btn-ghost">or learn more about me →</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-card">
+        <!-- <div class="hero-photo-placeholder"></div> -->
+        <img class="hero-photo" src="../../assets/images/about-me-img.jpg" />
+      </div>
+    </div>
+  </section>
 
-      gtag("config", "G-F4F7YBFSTK");
-    </script>
+  <!-- ABOUT -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">About</p>
+        <h2 id="about-title" class="section-title">Who I am</h2>
+      </div>
+    </div>
+    <div class="about-layout">
+      <div class="about-card">
+        <p class="section-body">
+          I’m interested in how people communicate across cultures and contexts
+          — and how media, platforms, and power shape those conversations.
+        </p>
+        <p class="section-body">
+          I’m currently in University pursuing a bachelors in Communication
+          Studies with a minor in Computer Science. I care deeply about
+          meaningful communication, collaborative problem-solving, and building
+          systems that make space for everyone’s voice. My studies help me
+          bridge the gap between people and technology, and I’m always looking
+          for ways to make ideas more accessible, inclusive, and impactful.
+        </p>
+        <a
+        href="/about"
+        class="project-link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        more →
+      </a>
+      </div>
 
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <main>
-      <Header />
-      <header>
-        <!-- <h1>Hello World!</h1> -->
-        <img class="pic" src="/assets/images/selfie.jpg" />
-
-        <div class="nameBox">
-          <a href="/">
-            <h1 class="name" title="click to view my site 🐸">samkitkat</h1>
-          </a>
-        </div>
-        <div class="bio">
-          <p class="boxTextColor">🌿 Just a coder girl in a coder world 🌿</p>
-        </div>
-      </header>
-
-      <div class="showcase">
-        <div class="showTitle">
-          <div class="bio">
-            <p class="showTitle boxTextColor">
-              ⭐&nbsp;&nbsp; My Projects &nbsp;&nbsp;⭐
-            </p>
-          </div>
-        </div>
+      <div class="about-card">
+        <p class="section-body">watch me chaos-test code in real time</p>
 
         <ul class="boxes">
-          <li class="box" title="todo app">
-            <a
-              href={`${project4.data.projectURL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/book.svg"
-                  alt="discord"
-                  width="20"
-                />
-                <h3 class="title boxTextColor">{project4.data.title}</h3>
-              </div>
-              <p class="p boxTextColor">{project4.data.description}</p>
-              <div class="tags-boxes">
-                {
-                  project4.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </a>
-          </li>
-          <li class="box" title="cli">
-            <a
-              href={`${project0.data.projectURL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/heart.svg"
-                  alt="heart"
-                  width="20"
-                />
-                <h3 class="title boxTextColor">{project0.data.title}</h3>
-              </div>
-              <p class="p boxTextColor">{project0.data.description}</p>
-              <div class="tags-boxes">
-                {
-                  project0.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </a>
-          </li>
-          <li class="box">
-            <a
-              href="https://fine-writer-bd0.notion.site/Civic-Tech-Opportunities-f698a79b02b5498ea0051135a592404f"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/book.svg"
-                  alt="civictech"
-                  width="20"
-                />
-                <h3 class="title boxTextColor">Civic Tech Opportunities</h3>
-              </div>
-              <p class="p boxTextColor">
-                Notion database of civic tech jobs, intenships, and volunteer
-                opps
-              </p>
-            </a>
+          <li class="box" title="follow me on twitch ;)">
+            <div class="frame1">
+              <iframe
+                class="frame"
+                src={links.iframeTwitch.url}
+                allowfullscreen="true"></iframe>
+            </div>
           </li>
 
-          <li class="box">
-            <a
-              href="https://www.samkitkat.com/d20/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/heart.svg"
-                  alt="react"
-                  width="20"
-                />
-                <h3 class="title boxTextColor">Bet you can't get a 20 ;)</h3>
-              </div>
-              <p class="p boxTextColor">Try out my d20 roller!</p>
-              <div class="tags-boxes">
-                {
-                  project2.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </a>
-          </li>
-
-          <li class="box" title="gradChanger">
-            <a
-              href={`${project2.data.projectURL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/book.svg"
-                  alt="discord"
-                  width="20"
-                />
-                <h3 class="title boxTextColor">{project2.data.title}</h3>
-              </div>
-              <p class="p boxTextColor">{project2.data.description}</p>
-              <div class="tags-boxes">
-                {
-                  project2.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </a>
-          </li>
-          <li class="box" title="vday">
-            <a
-              href={`${project5.data.projectURL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="info">
-                <img
-                  class="icon"
-                  src="/assets/icons/heart.svg"
-                  alt="heart"
-                  width="20"
-                />
-                <h3 class="title boxTextColor">{project5.data.title}</h3>
-              </div>
-              <p class="p boxTextColor">{project5.data.description}</p>
-              <div class="tags-boxes">
-                {
-                  project5.data.tags.map((tag) => (
-                    <div class="tag-box">
-                      <p class="tags">{tag}</p>
-                    </div>
-                  ))
-                }
-              </div>
-            </a>
-          </li>
-        </ul>
-
-        <div class="showTitle">
-          <div class="bio">
-            <p class="showTitle boxTextColor">
-              🎬&nbsp;&nbsp; My Videos &nbsp;&nbsp;🎬
-            </p>
-          </div>
-        </div>
-        <ul class="boxes">
           <li class="box" title="watch my yt vids ;)">
             <div class="frame1">
               <iframe
@@ -279,19 +98,151 @@ const project5 = posts[5];
                 allowfullscreen></iframe>
             </div>
           </li>
-          <li class="box" title="follow me on twitch ;)">
-            <div class="frame1">
-              <iframe
-                class="frame"
-                src={links.iframeTwitch.url}
-                allowfullscreen="true"
-              >
-              </iframe>
-            </div>
-          </li>
         </ul>
       </div>
-      <Footer />
-    </main>
-  </body>
-</html>
+    </div>
+  </section>
+
+  <!-- PERSONAL PROJECTS PREVIEW -->
+  <section id="projects" class="section" aria-labelledby="personal-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Personal Projects</p>
+        <h2 id="personal-title" class="section-title">
+          Things I’ve made for fun, learning, and curiosity
+        </h2>
+      </div>
+      <a href="/projects" class="section-link">View all →</a>
+    </div>
+
+    <p class="section-body">
+      A few recent creative coding and personal experiments. For the full
+      collection, check out the projects page.
+    </p>
+
+    <div class="projects-grid">
+      {
+        featuredPersonal.map((project) => (
+          <article class="project-card">
+            <div class="project-header">
+              <p class="project-role">{project.role}</p>
+
+              {project.githubURL && (
+                <a href={project.githubURL} target="_blank" class="github-icon">
+                  <img src="/assets/icons/github.svg" alt="GitHub repo" />
+                </a>
+              )}
+            </div>
+
+            <h3 class="project-title">{project.title}</h3>
+            <p class="project-description">{project.description}</p>
+           
+            <div class="card-footer">
+            <a
+              href={project.projectURL}
+              class="project-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View project →
+            </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- WORK PROJECTS PREVIEW -->
+  <section id="client-work" class="section" aria-labelledby="work-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Client & Work Projects</p>
+        <h2 id="work-title" class="section-title">
+          Websites & visual work for organizations
+        </h2>
+      </div>
+      <a href="/projects#work-projects" class="section-link">View all →</a>
+    </div>
+
+    <p class="section-body">
+
+    </p>
+
+    <div class="projects-grid">
+      {
+        featuredWork.map((work) => (
+          <article class="project-card">
+            <p class="project-role">{work.role}</p>
+            <h3 class="project-title">{work.title}</h3>
+            <p class="project-description">{work.description}</p>
+            <div class="card-footer">
+            <a
+              href={work.projectURL}
+              class="project-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View project →
+            </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section id="blog" class="section" aria-labelledby="blog-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Blog</p>
+        <h2 id="blog-title" class="section-title">Writing &amp; notes</h2>
+      </div>
+      <a href="/blog" class="section-link">View all →</a>
+    </div>
+
+    <p class="section-body">
+    </p>
+
+    <div class="posts-grid">
+      {
+        featuredPosts.map((post) => (
+          <article class="post-card">
+            <p class="post-meta">{post.date}</p>
+            <h3 class="post-title">{post.title}</h3>
+            <p class="post-description">{post.description}</p>
+            <a
+              href={post.link}
+              class="project-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              read →
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Contact</p>
+        <h2 id="contact-title" class="section-title">Let's Chat!</h2>
+      </div>
+    </div>
+
+    <p class="section-body">
+      I’m open to chatting about projects, collaborations, interviews, or just
+      swapping thoughts about culture and being very online. If something here
+      resonated with you, I’d love to hear from you.
+    </p>
+    <p class="section-body">
+      Feel free to reach out to me on any of my socials!
+    </p>
+    </div>
+  </section>
+</SiteLayout>

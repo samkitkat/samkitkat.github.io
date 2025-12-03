@@ -1,0 +1,237 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { workProjects } from "../data/projects";
+---
+
+<SiteLayout
+  title="About — Samar"
+  description="A timeline of my journey through tech, communication, streaming, and community work."
+>
+  <section class="section" aria-labelledby="about-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">About Me</p>
+        <h1 id="about-title" class="section-title">My Journey</h1>
+      </div>
+    </div>
+
+    <p class="section-body" style="max-width: 42rem;">
+      A timeline of where I’ve been, what I’ve built, and the people and communities that shaped me along the way.
+    </p>
+
+    <div class="timeline">
+      <!-- ERA: Now at SFSU -->
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Now — San Francisco State University</h3>
+          <p class="timeline-text">
+            Today, I’m studying <strong>Communication Studies</strong> at <strong
+              >San Francisco State University</strong
+            >, with a minor in Computer Science.
+          </p>
+          <p class="timeline-text">
+            And I'm currently looking for <strong>Summer 2026 Internships</strong> 👀
+          </p>
+        </div>
+      </div>
+
+      <!-- ERA: Browserbase -->
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">Summer 2025 — My Contracting Era</h3>
+          <p class="timeline-text">
+            I joined <strong>Browserbase</strong> as a <strong
+              >Contract Event Logistics Coordinator</strong
+            >, to help plan and execute their 150-person <a class="about-link" href="https://x.com/samkitkat_/status/1935402776458326282?s=20">Series B launch event</a>.
+          </p>
+          <p class="timeline-text">
+            I coordinated vendors (entertainment, custom merch, security,
+            catering), built detailed day-of timelines, and created tracking
+            systems for design deliverables, shipping, and expenses — all under
+            a tight two-week planning window.
+          </p>
+        </div>
+      </div>
+
+      <!-- ERA: Returning to School & Graduating from Chabot -->
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            Spring 2025 — Guess Who's Back? Back in College Again
+          </h3>
+          <p class="timeline-text">
+            In 2025, I returned to <strong>Chabot College</strong> to finish what
+            I started, this time focusing on
+            <strong>Communication Studies</strong>. By then end of the spring semester I completed my AA-T (transfer)
+            requirements.
+          </p>
+          <p class="timeline-text">
+            Alongside classes, I supported other students as a <strong>Communications Lab Tutor</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- ERA: Freelance Web & Content Work -->
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            2023–2024 — My Freelancing Era
+          </h3>
+          <p class="timeline-text">
+            During this time, I worked as a <strong
+              >Freelance Content Designer & Fullstack Engineer</strong
+            >, collaborating with nonprofits and small organizations to design,
+            build, and launch WordPress sites and supporting tools.
+          </p>
+          <ul class="timeline-text bullet-list">
+            <li>
+              Designed and shipped websites for nonprofits like 
+              <strong><a class="about-link" href={workProjects[1].projectURL}>LAWA</a></strong>
+               and <strong><a class="about-link" href={workProjects[2].projectURL}>Hand2Stand</a></strong>
+            </li>
+            <li>
+              Created marketing assets that increased engagement and brand
+              awareness
+            </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+
+    <!-- ERA: Flynn -->
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="timeline-content">
+        <h3 class="timeline-title">August 2023 — Flynn</h3>
+        <p class="timeline-text">
+          I adopted a super precious kitty! <strong><a class="about-link" href="#flynn">Meet Flynn</a></strong>
+        </p>
+      </div>
+    </div>
+
+      <!-- ERA: Pandemic Streaming Era -->
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            2020–2023 — My Streamer Era
+          </h3>
+          <p class="timeline-text">
+            When the pandemic hit, I stepped away from school and unexpectedly
+            found myself becoming a
+            <strong>technical content creator</strong> and <strong
+              >Twitch streamer</strong
+            >. I started out streaming
+            <strong>Genshin Impact</strong>, then pivoted into sharing my
+            journey learning to code.
+          </p>
+
+          <ul class="timeline-text bullet-list">
+            <li>Built a community of over <strong>2.5K followers</strong></li>
+            <li>
+              Averaged <strong>40+ live viewers</strong> per stream, with some events
+              reaching 60+
+            </li>
+            <li>
+              Hosted guest speakers and live problem-solving sessions for
+              aspiring programmers
+            </li>
+            <li>
+              Negotiated a sponsored content partnership with <strong
+                ><a
+                  class="about-link"
+                  href="https://www.courier.com/blog/intro-to-your-courier-cheerleading-catalyst"
+                  >Courier</a
+                ></strong>
+            </li>
+          </ul>
+
+          <p class="timeline-text">
+            Streaming taught me how to explain ideas clearly, listen to a
+            community in real time, and create spaces where learning feels less
+            intimidating and more collaborative.
+          </p>
+        </div>
+      </div>
+
+
+    <!-- ERA: 2019 -->
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="timeline-content">
+        <h3 class="timeline-title">2019 — College Hiatus</h3>
+        <p class="timeline-text">
+          The Pandemic hit and I thought it was a good time to take a gap year, or 2 or 4...
+        </p>
+      </div>
+    </div>
+
+      <!-- ERA: Early College — Pre-2019 -->
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">
+            Before 2019 — College
+          </h3>
+          <p class="timeline-text">
+            I started my journey at <strong>Chabot College</strong> as a Computer
+            Science major. During this time, I served as <strong
+              >President of the Computer Science Club</strong
+            >, competed on the
+            <strong
+              ><a
+                class="about-link"
+                href="https://www.facebook.com/243055725784754/photos/greetings-from-the-chabot-forensics-team-we-are-excited-to-welcome-you-to-the-be/1852673591489618/"
+                >Speech &amp; Debate (Forensics) Team</a
+              ></strong
+            >, and even performed in a <strong>theatre production</strong>.
+          </p>
+          <p class="timeline-text">
+            Those early years taught me how much I love being part of
+            communities — whether we’re building things, arguing cases, or
+            telling stories on stage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLYNN SECTION -->
+  <section id="flynn" class="section" aria-labelledby="flynn-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Life offline</p>
+        <h2 id="flynn-title" class="section-title">Flynn 🐾</h2>
+      </div>
+    </div>
+
+    <p class="section-body" style="max-width: 42rem;">
+      When I’m not studying or building projects, I’m usually hanging out with
+      my cat, Flynn — the unofficial coworker of my desk. He is very supportive
+      unless I'm typing, in which case he insists on sitting directly on the
+      keyboard.
+    </p>
+
+    <div class="cat-grid">
+      <img
+        src="/assets/images/flynn-1.jpg"
+        alt="Flynn photo 1"
+        class="cat-photo"
+      />
+      <img
+        src="/assets/images/flynn-2.jpg"
+        alt="Flynn photo 2"
+        class="cat-photo"
+      />
+      <img
+        src="/assets/images/flynn-3.jpg"
+        alt="Flynn photo 3"
+        class="cat-photo"
+      />
+    </div>
+  </section>
+</SiteLayout>

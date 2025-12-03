@@ -1,25 +1,13 @@
 ---
-const today = new Date();
-import Socials from "./Socials.astro";
+import { links } from "../data/consts";
 ---
 
-  <footer>
-    <h1>♡ {today.getFullYear()} سمر ♡</h1>
-    <Socials />
-  </footer>
-
-<style>
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #588157;
-  }
-  h1 {
-    font-family: title;
-    font-size: 1.3em;
-    -webkit-text-stroke: 0px;
-    text-shadow: none;
-  }
-</style>
+<footer class="footer">
+  <span>© {new Date().getFullYear()} Samar</span>
+  <div class="footer-links">
+    <a href={links.twitter.url} target="_blank" rel="noreferrer">X</a>
+    <a href={links.medium.url} target="_blank" rel="noreferrer">Medium</a>
+    <a href={links.linkedin.url} target="_blank" rel="noreferrer">LinkedIn</a>
+    <a href={links.github.url} target="_blank" rel="noreferrer">Github</a>
+  </div>
+</footer>

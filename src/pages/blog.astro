@@ -1,0 +1,113 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { posts } from "../data/posts";
+
+const sortedPosts = [...posts].sort(
+  (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
+);
+
+const [featuredPost, ...restPosts] = sortedPosts;
+---
+
+<SiteLayout
+  title="Blog — Samar"
+  description="Writing, reporting, and published work from Samar — spanning student protest coverage, developer content, and community-centered tech."
+>
+  <section class="section" aria-labelledby="blog-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Blog</p>
+        <h1 id="blog-title" class="section-title">Writing &amp; Published Work</h1>
+      </div>
+    </div>
+
+    <p class="section-body" style="max-width: 42rem;">
+      A snapshot of my writing across publications — from campus journalism and community storytelling
+      to technical content for developers and guides for first-time hackers.
+    </p>
+
+    <!-- FEATURED STORY -->
+    {featuredPost && (
+      <article class="blog-hero">
+        {featuredPost.heroImage && (
+          <div class="blog-hero-image-wrap">
+            <img
+              src={featuredPost.heroImage}
+              alt={featuredPost.title}
+              class="blog-hero-image"
+            />
+          </div>
+        )}
+
+        <div class="blog-hero-content">
+          <p class="blog-meta">
+            <span class="blog-meta-source">
+              {featuredPost.source || "Published work"}
+            </span>
+            <span class="blog-meta-divider">•</span>
+            <span>{featuredPost.date}</span>
+          </p>
+
+          <h2 class="blog-hero-title">{featuredPost.title}</h2>
+
+          <p class="blog-hero-description">{featuredPost.description}</p>
+
+          <a
+            href={featuredPost.link}
+            class="blog-hero-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read full article →
+          </a>
+        </div>
+      </article>
+    )}
+
+    <!-- REST OF ARTICLES -->
+    {restPosts.length > 0 && (
+      <div class="blog-list">
+        {restPosts.map((post) => (
+          <article class="blog-list-item">
+            <div class="blog-list-main">
+              <p class="blog-meta">
+                <span class="blog-meta-source">
+                  {post.source || "Published work"}
+                </span>
+                <span class="blog-meta-divider">•</span>
+                <span>{post.date}</span>
+              </p>
+
+              <h2 class="blog-list-title">
+                <a href={post.link} target="_blank" rel="noreferrer" class="blog-list-link">
+                  {post.title}
+                </a>
+              </h2>
+
+              <p class="blog-list-description">{post.description}</p>
+
+              <a
+                href={post.link}
+                class="blog-list-cta"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Read article →
+              </a>
+            </div>
+
+            {post.heroImage && (
+              <div class="blog-list-image-wrap">
+                <img
+                  src={post.heroImage}
+                  alt={post.title}
+                  class="blog-list-image"
+                />
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
+</SiteLayout>

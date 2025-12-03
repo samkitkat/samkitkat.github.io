@@ -1,0 +1,123 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { personalProjects, workProjects } from "../data/projects";
+---
+
+<SiteLayout
+  title="Projects — Samar"
+  description="Personal, client, and community projects by Samar"
+>
+  <!-- <header class="section" aria-labelledby="projects-hero-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Projects</p>
+        <h1 id="projects-hero-title" class="section-title">
+          Things I’ve built, tested, and cared about
+        </h1>
+      </div>
+    </div>
+    <p class="section-body">
+      Some of these projects were built for fun on stream, for class, or for clients.
+    </p>
+  </header> -->
+
+  <!-- PERSONAL PROJECTS -->
+  <section class="section" aria-labelledby="personal-projects-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Personal & Experimental</p>
+        <h2 id="personal-projects-title" class="section-title">
+          Personal & Class Projects
+        </h2>
+      </div>
+    </div>
+
+    <p class="section-body">
+      These are projects I made for myself, for friends, or live on stream —
+      little tools, playful generators, and experiments in making ideas feel
+      more tangible.
+    </p>
+
+    <div class="projects-grid">
+      {
+        personalProjects.map((project) => (
+          <article class="project-card">
+            <div class="project-header">
+              <p class="project-role">{project.role}</p>
+
+              {project.githubURL && (
+                <a href={project.githubURL} target="_blank" class="github-icon">
+                  <img src="/assets/icons/github.svg" alt="GitHub repo" />
+                </a>
+              )}
+            </div>
+
+            <h3 class="project-title">{project.title}</h3>
+            <p class="project-description">{project.description}</p>
+            <div class="card-footer">
+            <a
+              href={project.projectURL}
+              class="project-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View project →
+            </a>
+          </div>
+            {project.caseStudy && (
+              <a href={project.caseStudy} class="project-link">
+                View case study →
+              </a>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- WORK / CLIENT PROJECTS -->
+  <section id="work-projects" class="section" aria-labelledby="client-projects-title">
+    <div class="section-header">
+      <div>
+        <p class="section-kicker">Client & Work Projects</p>
+        <h2 id="client-projects-title" class="section-title">
+          Websites & visuals for organizations
+        </h2>
+      </div>
+    </div>
+
+    <p class="section-body">
+      I also collaborate with nonprofits, community groups, and creators on
+      their online presence — from full websites to streaming assets. My focus
+      is on accessibility, clarity, and helping people show up in a way that
+      feels aligned with their work.
+    </p>
+
+    <div class="projects-grid">
+      {
+        workProjects.map((work) => (
+          <article class="project-card">
+            <p class="project-role">{work.role}</p>
+            <h3 class="project-title">{work.title}</h3>
+            <p class="project-description">{work.description}</p>
+            <div class="card-footer">
+            <a
+              href={work.projectURL}
+              class="project-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View project →
+            </a>
+            </div>
+            {work.caseStudy && (
+              <a href={work.caseStudy} class="project-link">
+                View case study →
+              </a>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</SiteLayout>

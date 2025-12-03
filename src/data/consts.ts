@@ -1,5 +1,4 @@
 // Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = "samkitkat's dev site ♡";
 export const SITE_DESCRIPTION = "samkitkat personal portfolio site";
@@ -10,7 +9,7 @@ export const links = {
     icon: "/assets/icons/twitch.svg"
   },
   tumblr: {
-    url: "https://kitkatcodes.tumblr.com/",
+    url: "https://sam-studies.tumblr.com/",
     icon: "/assets/icons/tumblr.svg"
   },
   twitter: {
@@ -26,7 +25,7 @@ export const links = {
     icon: "/assets/icons/tiktok.svg"
   },
   insta: {
-    url: "https://instagram.com/samkitkat_dev",
+    url: "https://instagram.com/samkitkat_",
     icon: "/assets/icons/insta.svg"
   },
   kofi: {
@@ -36,6 +35,18 @@ export const links = {
   discord: {
     url: "https://discord.gg/VTFWs5Sx8f",
     icon: "/assets/icons/discord.svg"
+  },
+  medium: {
+    url: "https://medium.com/@sbarakitkat",
+    icon: ""
+  },
+  linkedin: {
+    url: "https://www.linkedin.com/in/sbarakitkat/",
+    icon: ""
+  },
+  github: {
+    url: "https://github.com/samkitkat",
+    icon: "/assets/icons/github.svg"
   },
   iframeTwitch: {
     url: "https://player.twitch.tv/?collection=rpVYg7cV3RZbUA&parent=www.samkitkat.com&muted=true"
