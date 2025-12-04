@@ -20,18 +20,14 @@ const { title, description, pubDate, projectURL, tags } = entry.data;
   <article class="section">
     <header class="section-header">
       <div>
-        <p class="section-kicker">Case Study</p>
+        <p class="section-kicker">Case Study · {pubDate.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}</p>
         <h1 class="section-title">{title}</h1>
       </div>
     </header>
-
-    <p class="section-body">
-      <strong>{pubDate.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })}</strong>
-    </p>
 
     {projectURL && (
       <p class="section-body">
@@ -41,14 +37,14 @@ const { title, description, pubDate, projectURL, tags } = entry.data;
       </p>
     )}
 
-    {tags && tags.length > 0 && (
-      <p class="section-body">
-        <em>Tags:</em> {tags.join(", ")}
-      </p>
-    )}
-
     <div class="section-body rich-text">
       <Content />
     </div>
+
+    {tags && tags.length > 0 && (
+      <p class="section-body">
+        Tags: {tags.join(", ")}
+      </p>
+    )}
   </article>
 </SiteLayout>

@@ -158,11 +158,6 @@ main {
 }
 
 @media (max-width: 640px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .nav-links {
     flex-wrap: wrap;
   }
@@ -901,8 +896,7 @@ main {
 }
 
 .project-card,
-.post-card,
-.blog-list-item {
+.post-card {
   display: flex;
   flex-direction: column;
   height: 100%;
