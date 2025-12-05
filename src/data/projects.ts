@@ -53,6 +53,14 @@ export const personalProjects = [
 
 export const workProjects = [
   {
+    title: "Browserbase Series B Launch Event",
+    role: "Event Logistics · Visual Design",
+    description:
+      "Helped plan and coordinate a 150-person Series B launch event, and designed visual assets used across the space — signage, screen graphics, and small details that tied the experience together.",
+    projectURL: "/case-studies/browserbase-event", // check out https://browserbase.com!
+    caseStudy: "/case-studies/browserbase-event", 
+  },
+  {
     title: "Lebanese American Women Association (LAWA)",
     role: "Nonprofit · Web Design · Wordpress",
     description:
