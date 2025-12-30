@@ -16,7 +16,7 @@ const featuredPosts = posts.slice(0, 2);
       <p class="eyebrow">♡ Welcome to My Portfolio ♡</p>
       <h1 id="hero-title" class="hero-title"></h1>
       <p class="hero-subtitle">
-        Hi, I’m Samar—I’m passionate about creating people-centered experiences
+        Hi, I’m Samar — I’m passionate about creating people-centered experiences
         that blend storytelling, technology, and community impact.
       </p>
       <p class="hero-subtitle">
@@ -147,6 +147,11 @@ const featuredPosts = posts.slice(0, 2);
               View project →
             </a>
             </div>
+            {project.caseStudy && (
+              <a href={project.caseStudy} class="project-link">
+                View case study →
+              </a>
+            )}
           </article>
         ))
       }
@@ -186,6 +191,11 @@ const featuredPosts = posts.slice(0, 2);
               View project →
             </a>
             </div>
+            {work.caseStudy && (
+              <a href={work.caseStudy} class="project-link">
+                View case study →
+              </a>
+            )}
           </article>
         ))
       }

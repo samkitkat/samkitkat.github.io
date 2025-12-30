@@ -8,9 +8,10 @@ export const personalProjects = [
       "A playful tool that auto-generates one-shot D&D adventures with settings, characters, and conflicts.",
     githubURL: "https://github.com/samkitkat/dnd-oneshot-generator",
     projectURL: "https://dnd-oneshot-generator-production.up.railway.app/",
+    caseStudy: "/case-studies/dnd-gen",
   },
   {
-    title: "GatorDo — Task Management App",
+    title: "GatorDo — Todo App",
     role: "React · Supabase · Netlify",
     description:
       "A simple, friendly to-do app built for a course project, focused on clean UX and task clarity. Includes task creation, filtering, and persistent local storage.",
