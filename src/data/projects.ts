@@ -7,7 +7,8 @@ export const personalProjects = [
     description:
       "A playful tool that auto-generates one-shot D&D adventures with settings, characters, and conflicts.",
     githubURL: "https://github.com/samkitkat/dnd-oneshot-generator",
-    projectURL: "https://dnd-oneshot-generator-production.up.railway.app/",
+    projectURL: "https://github.com/samkitkat/dnd-oneshot-generator",
+    // "https://dnd-oneshot-generator-production.up.railway.app/" I ran out of free trial rip
     caseStudy: "/case-studies/dnd-gen",
   },
   {
@@ -17,6 +18,7 @@ export const personalProjects = [
       "A simple, friendly to-do app built for a course project, focused on clean UX and task clarity. Includes task creation, filtering, and persistent local storage.",
     githubURL: "https://github.com/samkitkat/gatordo",
     projectURL: "https://gatordo.netlify.app/",
+    caseStudy: "/case-studies/gatordo",
   },
   {
     title: "D20 Roller",

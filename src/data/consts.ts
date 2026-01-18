@@ -48,6 +48,10 @@ export const links = {
     url: "https://github.com/samkitkat",
     icon: "/assets/icons/github.svg"
   },
+  bluesky: {
+    url: "https://bsky.app/profile/samkitkat.bsky.social",
+    icon: ""
+  },
   iframeTwitch: {
     url: "https://player.twitch.tv/?collection=rpVYg7cV3RZbUA&parent=www.samkitkat.com&muted=true"
   },
