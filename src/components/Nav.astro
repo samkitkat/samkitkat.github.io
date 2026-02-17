@@ -1,4 +1,5 @@
 ---
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="nav">
@@ -8,9 +9,9 @@
   </div>
 
   <nav class="nav-links" aria-label="Main navigation">
-    <a href="/about" class="nav-link">About</a>
-    <a href="/projects" class="nav-link">Projects</a>
-    <a href="/blog" class="nav-link">Blog</a>
+    <a href="/about" class={`nav-link ${currentPath === "/about" ? "nav-active" : ""}`}>About</a>
+    <a href="/projects" class={`nav-link ${currentPath === "/projects" ? "nav-active" : ""}`}>Projects</a>
+    <a href="/blog" class={`nav-link ${currentPath === "/blog" ? "nav-active" : ""}`}>Blog</a>
     <a href="/#contact" class="nav-link">Contact</a>
   </nav>
 </header>
